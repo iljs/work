@@ -1,0 +1,1 @@
+<?php class telegramToken{public $token = "1301565242:AAFZkLjOBWxBfRDzx7Rs5mczc0sZDv0Y5dA";}

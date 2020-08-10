@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FullTrade - Часто задаваемые вопросы</title>
+	<meta name="viewport" content="width=device-width">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+ 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+ 	<link rel="shortcut icon" href="images/icon.png" type="image/png">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div style="width: 100%; overflow: hidden;">
+		<h1 >Частые вопросы и ответы</h1>
+		<a href="../terminal">Вернуться назад</a>
+	</div>
+	<div id="question_block">
+		<h2>Безопасно ли это?</h2>
+		<div id="text_block">
+			<p>В мире больших денег не бывает абсолютно безопасных способов заработать. Риски есть всегда. Даже если вы положите деньги на банковский счёт, есть риск, что у него отберут скоро лицензию, а ЦБ выплатит вам только часть прибыли.<br><br>
+
+			В бинарных опционах тоже есть риски. Прежде всего, это зависит от вас. Азартный вы человек или можете держать себя в руках? У любого трейдера бывают и прибыльные и сливные дни. Но в любой из этих дней нужно уметь остановиться. Взял прибыль +20% за день? Отлично! Можно пойти отдохнуть. Слил 20%? Бывает! В следующие дни отобьёшь убыток, ничего страшного!</p>
+		</div>
+	</div>
+	<div id="question_block">
+		<h2>Минимальная и максимальная ставка?</h2>
+		<div id="text_block">
+			<p>Минимальная ставка 60р.<br>
+
+			Максимальная ставка 50000р.</p>
+		</div>
+	</div>
+	<div id="question_block">
+		<h2>Как быстро происходят выплаты?</h2>
+		<div id="text_block">
+			<p>Вывод прибыли происходит в течение нескольких часов, но зачастую средства выводятся мгновенно.</p>
+		</div>
+	</div>
+	<div id="question_block">
+		<h2>Комиссии</h2>
+		<div id="text_block">
+			<p>Комиссия на пополнение отсутствует.<br>
+
+			Для вывода на карты она составляет 80р+3%. На кошельки в среднем 2,5%.
+			</p>
+		</div>
+	</div>
+	<div id="question_block">
+		<h2>Время работы</h2>
+		<div id="text_block">
+			<p>Платформа работает 24/7.<br>
+				Валютные активы работают с понедельника 04:00 до 23:59:59 пятницы, также как и мировые биржи. 
+			</p>
+		</div>
+	</div>
+	<div id="question_block">
+		<h2>Котировки</h2>
+		<div id="text_block">
+			<p>Графики предоставлены TradingView.<br>
+			   Реальные котировки для трейдинга предоставлены 1forge.com. Ее вы можете увидеть во вкладке история во время активной ставки, которая меняется 3 раза в секунду. По возможности мы будем увеличивать частоту котировок.
+			</p>
+		</div>
+	</div>
+	<div id="question_block">
+		<h2>Если котировка равна зактырию, то как считается?</h2>
+		<div id="text_block">
+			<p>При котировке закрытия равной котировке открытия результат сделки считается минус, а не возврат.
+			</p>
+		</div>
+	</div>
+	<div id="question_block">
+		<h2>Контакты</h2>
+		<div id="text_block">
+			<p>По поводу вопросов пишите нам на почту: support@fulltrade.su<br>По поводу коммерческих предложений:<br> work@fulltrade.su
+			</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).on('click', "#question_block", function() {
+			if($('#text_block', this).css('display') == 'none') {
+				$('#text_block', this).toggleClass('vis');
+			}else{
+				$('#text_block', this).removeClass('vis');
+			}
+		});
+	</script>
+</body>
+</html>

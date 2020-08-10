@@ -1,0 +1,350 @@
+body{
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: 'Montserrat';
+	transition: 0.4s;
+	background: #131722;
+	overflow-x: hidden;
+
+	user-select: none;
+	-ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+	text-align: left;
+}
+
+input{
+	background: rgba(255,255,255,0.1);
+	padding: 10px;
+	font-size: 16px;
+	color: white;
+	outline: none;
+	width: calc(100% - 24px);
+	border: 2px solid rgba(255,255,255,0.05);
+}
+
+
+
+
+.panel{
+	width: 100%;
+    overflow: hidden;
+    height: calc(100% - 48px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    display: none;
+}
+
+.panel-content{
+	clear: both;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	position: relative;
+}
+
+.panel-scroll{
+	clear: both;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	position: relative;
+}
+
+.menu{
+	width: 100%;
+	overflow: hidden;
+    height: 48px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: rgb(43, 47, 57);
+}
+
+.menu_button{
+	width: 33.3%;
+	opacity: 0.5;
+	overflow: hidden;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    float: left;
+    height: 48px;
+}
+
+.menu_button.active{
+	opacity: 1;
+}
+
+
+
+
+
+.defaultBlock{
+	width: 100%;
+    text-align: center;
+    overflow: hidden;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    display: none;
+    background: #131722;
+}
+
+
+
+
+
+.defaultBlockHeader{
+	width: 90%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	overflow: hidden;
+	background: rgba(255,255,255,0.04);
+}
+
+.defaultBlockHeaderSetting{
+	width: 90%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	overflow: hidden;
+}
+
+.defaultBlockHeader img{
+	float: left;
+	height: 28px;
+	margin-right: 30px;
+}
+
+.defaultBlockHeader h1, .defaultBlockHeaderSetting h1{
+	font-size: 20px;
+	font-size: 500;
+	float: left;
+	margin-top: 1.5px;
+	margin-bottom: 1.5px;
+}
+
+
+
+
+
+
+
+.defaultContainer{
+	width: 90%;
+	padding-left: 5%;
+	padding-right: 5%;
+	overflow: hidden;
+	margin-top: 8px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: rgba(255,255,255,0.04);
+
+}
+
+.defaultContainer p{
+	margin-top: 10px;
+	font-size: 14px;
+	overflow: hidden;
+	width: 100%;
+	float: left;
+	text-align: left;
+}
+
+.defaultContainer b{
+	margin-top: 10px;
+	font-size: 19px;
+	overflow: hidden;
+	width: 100%;
+	float: left;
+	text-align: left;
+}
+
+.defaultContainer a{
+	color: white;
+}
+
+
+
+.defaultContainerBlock{
+	height: 56px;
+	position: relative;
+	overflow: hidden;
+}
+
+.defaultContainerBlockImg{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    float: left;
+    height: 56px;
+    overflow: hidden;
+}
+
+.defaultContainerBlockImg img{
+	height: 34px;
+}
+
+.defaultContainerBlockText{
+	height: 56px;
+	float: left;
+	overflow: hidden;
+}
+
+.defaultContainerBlockText p{
+	margin: 20px;
+	margin-left: 15px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.defaultContainerBlockTextRight{
+	float: right;
+	overflow: hidden;
+	height: 56px;
+}
+
+.defaultContainerBlockTextRight p{
+	margin: 21px;
+	font-size: 12px;
+	font-weight: 400;
+	opacity: 0.6;
+}
+
+
+#settingMainInfoClickUI{
+	height: 56px;
+}
+
+
+
+
+
+
+
+.inputBlock{
+	width: 90%;
+	padding-left: 5%;
+	padding-right: 5%;
+	overflow: hidden;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.inputBlockHalfLeft, .defaultBlockHalfLeft{
+	float: left;
+	width: 47.5%;
+	overflow: hidden;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.inputBlockHalfRight, .defaultBlockHalfRight{
+	float: right;
+	width: 47.5%;
+	overflow: hidden;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.inputBlock p, .inputBlockHalfLeft p, .inputBlockHalfRight p{
+	font-size: 9px;
+	margin-top: 3px;
+}
+
+
+
+.buttonDark{
+	background: #131722;
+	border-radius: 3px;
+	padding: 10px;
+	color: white;
+	font-weight: 500;
+	border: 2px solid white;
+	width: calc(100% - 24px);
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+.buttonLight{
+	background: white;
+	border-radius: 3px;
+	padding: 10px;
+	color: #131722;
+	font-weight: 500;
+	border: 2px solid white;
+	width: calc(100% - 24px);
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+
+.buttonLight p, .buttonDark p{
+	text-align: center;
+}
+
+
+
+.defaultBlockFixedBottom{
+	width: 90%;
+	padding-left: 5%;
+	padding-right: 5%;
+	overflow: hidden;
+	padding-bottom: 10px;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+}
+
+
+
+
+.clickUI{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    opacity: 0.5;
+    float: right;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+.padding5PX{
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+}
+
+
+@media all and (orientation:landscape) {
+	#defaultUserUI{
+		display: none;
+	}
+}

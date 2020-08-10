@@ -1,0 +1,78 @@
+<div id="chart">
+	<div style="overflow: hidden; width: 100%;" id="cancel_header">
+		<h1 id="custom-1_title">График</h1>
+		<div id="cancel">
+			<img src="./img/svg/cancel.svg" height="15">
+		</div>
+	</div>
+	<h4></h4>
+	<div id="chart_main">              
+        <canvas id="chart_main_canvas" width="100%" height="600"></canvas>
+    </div>
+    <div class="default_block">
+    	<div id="chart_info_all" class="default_block_half">
+    		<div class="default_block_header">
+	        	<p>ВСЕГО</p>
+	        	<img src="./img/svg/next.svg" height="7">
+	        </div>
+			<h2></h2>
+    	</div>
+    	<div id="chart_info_mean" class="default_block_half">
+    		<div class="default_block_header">
+	        	<p>СРЕДНЕЕ</p>
+	        	<img src="./img/svg/next.svg" height="7">
+	        </div>
+			<h2></h2>
+    	</div>
+    </div>
+    <div id="chart_values" class="default_block">
+    	
+    </div>
+</div>
+
+<div id="chart_menu_main">
+	<div id="chart_menu_left">
+		 <img src="./img/svg/next.thing.svg" height="20" style="transform: rotate(180deg);">
+	</div>
+	<div id="chart_menu_setting">
+		 <img src="./img/svg/settings.svg" height="20">
+	</div>
+	<div id="chart_menu_right">
+		 	<img src="./img/svg/next.thing.svg" height="20">
+	</div>
+</div>
+
+<div id="chart_menu_all">
+	<div id="chart_menu_intervals">
+		<div id="chart_menu_interval" key="week">
+			<p>Неделя</p>
+		</div>
+		<div id="chart_menu_interval" key="month">
+			<p>Месяц</p>
+		</div>
+		<div id="chart_menu_interval" key="quarter">
+			<p>Квартал</p>
+		</div>
+	</div>
+	<div id="chart_menu_custom_intervals">
+		<div id="chart_menu_custom_interval">
+			<p>От</p>
+			<input type="date" id="chart_menu_custom_interval_start">
+		</div>
+		<div id="chart_menu_custom_interval">
+			<p>До</p>
+			<input type="date" id="chart_menu_custom_interval_end">
+		</div>
+		<div id="chart_menu_custom_button">
+			<img src="./img/svg/tick.svg" height="12">
+		</div>
+	</div>
+	<div id="chart_menu_intervals">
+		<div id="chart_menu_interval_half" key="0">
+			<p>Авто интервалы</p>
+		</div>
+		<div id="chart_menu_interval_half" key="1">
+			<p>Откл. интервалы</p>
+		</div>
+	</div>
+</div>

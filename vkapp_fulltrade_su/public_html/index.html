@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Прозрачный брокер</title>
+	<meta charset="utf-8">
+	<meta id="trade_info" tradetime="1" tradebet="100" token="" activecouples="" typecouples="update" balance="" withrdraw="" deposit="">
+	
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+ 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+ 	<link rel="shortcut icon" href="images/icon.png" type="image/png">
+ 	
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script src="https://cdn.jsdelivr.net/npm/@vkontakte/vk-bridge@2.0.8/dist/index.umd.js"></script>
+ 	<script src="./js/jquery.cookie.js"></script>
+ 	<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+ 	
+ 	<meta content="width=device-width, initial-scale=1" shrink-to-fit="no" user-scalable="no" viewport-fit="cover" name="viewport" />
+</head>
+<body>
+	<div id="root">
+		<div id="load">
+			<img src="img/svg/logo.svg" id="logo">
+			<div id="animation">
+				<div class="cssload-dots">
+				<div class="cssload-dot"></div>
+				<div class="cssload-dot"></div>
+				<div class="cssload-dot"></div>
+				<div class="cssload-dot"></div>
+				<div class="cssload-dot"></div>
+			</div>
+
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+				<defs>
+					<filter id="goo">
+						<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="12" ></feGaussianBlur>
+						<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0	0 1 0 0 0	0 0 1 0 0	0 0 0 18 -7" result="goo" ></feColorMatrix>
+						<!--<feBlend in2="goo" in="SourceGraphic" result="mix" ></feBlend>-->
+					</filter>
+				</defs>
+			</svg>
+			</div>
+		</div>
+		<!--
+		<div id="form" style="display: none; opacity: 0;">
+			<div id="header">
+				<div id="signup_way" class="active">
+					<p>Регистрация</p>
+				</div>
+				<div id="signin_way">
+					<p>Войти</p>
+				</div>
+			</div>
+			<div id="signup">
+				<input type="text" id="mail_r" placeholder="E-mail">
+				<input type="password" id="password_r" placeholder="Пароль">
+				<input type="password" id="password_replay_r" placeholder="Повтор пароля">
+				<button id="signup_button">Регистрация</button>
+			</div>
+			<div id="signin" class="disActive">
+				<input type="text" id="mail_l" placeholder="E-mail">
+				<input type="password" id="password_l" placeholder="Пароль">
+				<button id="signin_button">Войти</button>
+				<a href="./forgot">Забыли пароль</a>
+			</div>
+		</div>
+		-->
+	</div>
+	
+	<div id="terminal" style="display: none; opacity: 0;">
+	    <div id="ui">
+	        <div id="page" class="trade active">
+	            <h1>Терминал</h1>
+	            <div id="trade_way" class="page_block_novis_all">
+	                <div id="trade_balance" class="page_block_left_novis">
+	                   <div class="page_block_all">
+            	           <div class="page_block_header">
+            	               <p></p>
+            	               <img src="./img/svg/next.svg" height="7">
+            	           </div>
+            	           <h2></h2>
+            	       </div>
+        	        </div>
+    	            <div id="trade_couples" class="page_block_right_novis">
+    	                <div class="page_block_all">
+        	                <div class="page_block_header">
+        	                    <p>ПАРА</p>
+        	                    <img src="./img/svg/next.svg" height="7">
+        	                </div>
+        	               <h2 style="font-size: 14px; margin-top: 8px;"></h2>
+        	               <h3 style="margin-top: 2px;"></h3>
+        	            </div>
+    	            </div>
+	            </div>
+	            
+	           <div id="trade_widget">
+        			<div id="tradingview-widget-container"></div>
+        	   </div>
+	            
+	            <div id="trade_way" class="page_block_novis_all">
+	                <div id="trade_way_bet" class="page_block_left_novis">
+	                     <div id="trade_way_bet_main" class="page_block_all">
+	                         <div class="page_block_header">
+        	                    <p>СТАВКА</p>
+        	                    <img src="./img/svg/next.svg" height="7">
+        	                </div>
+        	                <h2></h2>
+	                     </div>
+	                     <div class="page_block_novis_all">
+	                         <div id="trade_way_bet_plus" class="page_block_left">
+	                             <h6>+</h6>
+	                         </div>
+	                         <div id="trade_way_bet_mines" class="page_block_right">
+	                             <h6>-</h6>
+	                         </div>
+	                     </div>
+	                </div>
+	                <div id="trade_way_time" class="page_block_right_novis">
+	                     <div id="trade_way_time_main" class="page_block_all">
+	                         <div class="page_block_header">
+        	                    <p>ВРЕМЯ</p>
+        	                    <img src="./img/svg/next.svg" height="7">
+        	                </div>
+        	                <h2></h2>
+	                     </div>
+	                     <div class="page_block_novis_all">
+	                         <div id="trade_way_time_plus" class="page_block_left">
+	                             <h6>+</h6>
+	                         </div>
+	                         <div id="trade_way_time_mines" class="page_block_right">
+	                             <h6>-</h6>
+	                         </div>
+	                     </div>
+	                </div>
+	            </div>
+	            <div id="trade_waybet" class="page_block_novis_all">
+	                <div id="trade_up">
+	                    <img src="img/up.png" height="50">
+	                </div>
+	                <div id="trade_down">
+	                    <img src="img/down.png" height="50">
+	                </div>
+	            </div>
+	        </div>
+	        <div id="page" class="history" style="margin-bottom: 64px;">
+	        </div>
+	        <div id="page" class="order">
+	            <h1>Касса</h1>
+	            <div class="page_block" id="order_balance">
+	                <div class="page_block_header">
+            	       <p>БАЛАНС</p>
+            	       <img src="./img/svg/next.svg" height="7">
+            	    </div>
+            	    <h2></h2>
+	            </div>
+	            <div id="deposit" class="page_block">
+	                <div class="page_block_header" id="deposit_header">
+            	       <p>ПОПОЛНИТЬ</p>
+            	       <img src="./img/svg/next.svg" height="7">
+            	    </div>
+            	    <div class=".page_block_novis" style="margin-top: 5px; height: 138px;" id="deposit_method">
+            	        <div class="page_block_img" id="deposit_block" key="card">
+                	        <img src="./img/svg/card.svg">
+                	    </div>
+                	    <div class="page_block_img" id="deposit_block" key="qiwi">
+                	        <img src="./img/qiwi_koshelek.png">
+                	    </div>
+                	    <div class="page_block_img" id="deposit_block" key="yandex">
+                	        <img src="./img/yandex_money.png">
+                	    </div>
+                	    <div class="page_block_img" id="deposit_block" key="other">
+                	        <img src="./img/svg/more.svg">
+                	    </div>
+            	    </div>
+            	    
+            	    <div class="page_block_all_novis" id="page_order_deposit_way" style="margin-top: 5px; display: none; opacity: 0;">
+            	        <div class="page_block_header" style="margin-top: 15px;">
+                	       <p>ОТ 500 РУБЛЕЙ</p>
+                	    </div>
+            	        <input id="page_order_input_deposit" type="number" value="2020" placeholser="Укажи сумму">
+	                    <div id="page_order_submit_deposit" class="page_order_submit">
+	                        <img src="./img/svg/tick.svg" height="15">
+	                    </div>
+            	    </div>
+            	    <div class="page_block_open" id="deposit_open" style="display: none; opacity: 0;">
+            	       <img src="./img/svg/next.svg" height="15">
+            	    </div>
+	            </div>
+	            <div id="withdraw" class="page_block">
+	                <div class="page_block_header" id="withdraw_header">
+            	       <p>ВЫВЕСТИ</p>
+            	       <img src="./img/svg/next.svg" height="7">
+            	    </div>
+            	    <div class=".page_block_novis" style="margin-top: 5px; height: 138px;" id="withdraw_method">
+            	        <div class="page_block_img" id="withdraw_block" key="card">
+                	        <img src="./img/svg/card.svg">
+                	    </div>
+                	    <div class="page_block_img" id="withdraw_block" key="qiwi">
+                	        <img src="./img/qiwi_koshelek.png">
+                	    </div>
+                	    <div class="page_block_img" id="withdraw_block" key="yandex">
+                	        <img src="./img/yandex_money.png">
+                	    </div>
+                	    <div class="page_block_img" id="withdraw_block" key="paypal">
+                	        <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png" style="margin-top: 5px; margin-bottom: 5px; height: 25px;">
+                	    </div>
+            	    </div>
+            	    <div id="withdraw_blocks" style="display: none; opacity: 0;">
+            	        <div id="withdraw_block_pay" style="display: none;">
+            	            <h4>Для вывода средств<br>требуется сделать депозит.</h4>
+            	        </div>
+            	        <div id="withdraw_block_form" style="display: none;">
+            	            <div class="page_block_header" style="margin-top: 15px;">
+                    	       <p>Укажите реквизиты</p>
+                    	    </div>
+            	            <input type="text" id="withdraw_form_data">
+            	            <div id="page_order_submit_withdraw" class="page_order_submit" style="padding-top: 48px; padding-bottom: 47px;">
+    	                        <img src="./img/svg/tick.svg" height="15">
+    	                    </div>
+            	            <div class="page_block_header" style="margin-top: 0;float: left; width: 150px">
+                    	       <p>Укажите сумму от 500 рублей</p>
+                    	       <p id="withdraw_comission">Комиссия</p>
+                    	    </div>
+            	            <input type="number" id="withdraw_form_sum" style="margin-bottom: 0;">
+            	            <div class="page_block_header" style="margin-top: 0;float: left; width: calc(100% - 144px);">
+                    	       
+                    	    </div>
+            	        </div>
+            	    </div>
+            	    <div class="page_block_open" id="withdraw_open" style="display: none; opacity: 0;">
+            	       <img src="./img/svg/next.svg" height="15">
+            	    </div>
+	            </div>
+	        </div>
+	        <div id="page" class="settings">
+	            <h1>Настройки</h1>
+	            <div class="page_block" id="setUserInfo">
+	                <img src="" height="85">
+	                <h2 style="margin: 5px; margin-left: 15px; width: calc(100% - 120px);"></h2>
+	                <h5></h5>
+	                <h4></h4>
+	            </div>
+	            <div class="page_block" id="setApiKey">
+	                <div class="page_block_header">
+            	       <p>КЛЮЧ API</p>
+            	       <img src="./img/svg/next.svg" height="7">
+            	    </div>
+            	    <h2></h2>
+	            </div>
+	            <div class="page_block" id="setVerify">
+	                <div class="page_block_header">
+            	       <p>ВЕРИФИЦИРОВАН</p>
+            	       <img src="./img/svg/next.svg" height="7">
+            	    </div>
+            	    <h2 style="overflow: hidden; display: none;">Да</h2>
+            	    <div class="page_block" style="display: none;" id="setVerifyBlock">
+            	        <h5>ПОДТВЕРДИТЬ</h5>
+            	    </div>
+	            </div>
+	            <div class="page_block" id="setMail">
+	                <div class="page_block_header">
+            	       <p>ПОЧТА</p>
+            	       <img src="./img/svg/next.svg" height="7">
+            	    </div>
+            	    <h2 style="overflow: hidden; display: none;"></h2>
+            	    <div class="page_block" style="display: none;" id="setMailBlock">
+            	        <h5>ПОДКЛЮЧИТЬ</h5>
+            	    </div>
+	            </div>
+	        </div>
+	        <div id="menu">
+	            <div id="menu_blocks">
+    	            <img src="./img/svg/technology.svg" id="menu_button" class="trade_button active" key="1">
+    	            <img src="./img/svg/history.svg" id="menu_button" class="history_button" key="2">
+    	            <img src="./img/svg/wallet.svg" id="menu_button" class="order_button" key="3">
+    	            <img src="./img/svg/settings.svg" id="menu_button" class="settings_button" key="4">
+	            </div>
+	        </div>
+	    </div>
+	    <div id="page_way">
+	        <div id="page_way_time" style="display: none;">
+	                <h1>Время</h1>
+	                <div id="page_way_time_block" class="page_way_time1" key="1">
+	                    <h2></h2>
+	                    <h3>+1</h3>
+	                </div>
+	                <div id="page_way_time_block" class="page_way_time2" key="2">
+	                    <h2></h2>
+	                    <h3>+2</h3>
+	                </div>
+	                <div id="page_way_time_block" class="page_way_time3" key="3">
+	                    <h2></h2>
+	                    <h3>+3</h3>
+	                </div>
+	                <div id="page_way_time_block" class="page_way_time5" key="5">
+	                    <h2></h2>
+	                    <h3>+5</h3>
+	                </div>
+	                <div id="page_way_time_block" class="page_way_time10" key="10">
+	                    <h2></h2>
+	                    <h3>+10</h3>
+	                </div>
+	                <div id="page_way_time_block" class="page_way_time30" key="30">
+	                    <h2></h2>
+	                    <h3>+30</h3>
+	                </div>
+	                <div id="page_way_time_block" class="page_way_time60" key="60">
+	                    <h2></h2>
+	                    <h3>+60</h3>
+	                </div>
+	                <div id="page_way_time_block" class="page_way_time120" key="120">
+	                    <h2></h2>
+	                    <h3>+120</h3>
+	                </div>
+	                <div id="page_way_time_block" class="page_way_time240" key="240">
+	                    <h2></h2>
+	                    <h3>+240</h3>
+	                </div>
+	            </div>
+	            <div id="page_way_bet" style="display: none;">
+	                <h1>Ставка</h1>
+	                <div id="page_way_bet_block">
+	                    <h2>60</h2>
+	                </div>
+	                <div id="page_way_bet_block">
+	                    <h2>100</h2>
+	                </div>
+	                <div id="page_way_bet_block">
+	                    <h2>200</h2>
+	                </div>
+	                <div id="page_way_bet_block">
+	                    <h2>350</h2>
+	                </div>
+	                <div id="page_way_bet_block">
+	                    <h2>500</h2>
+	                </div>
+	                <div id="page_way_bet_block">
+	                    <h2>750</h2>
+	                </div>
+	                <div id="page_way_bet_block">
+	                    <h2>1000</h2>
+	                </div>
+	                <div id="page_way_bet_block">
+	                    <h2>2000</h2>
+	                </div>
+	                
+	                <div id="page_way_bet_block" class="page_way_bet_now">
+	                    <input id="page_way_bet_now_input" type="number">
+	                    <div id="page_way_bet_now_submit" style="display: none">
+	                        <img src="./img/svg/tick.svg" height="15">
+	                    </div>
+	                </div>
+	            </div>
+	            <div id="page_way_couples" style="display: none;">
+	            </div>
+	            <div id="page_way_account" style="display: none;">
+	                <h1>Счет</h1>
+	                <div id="page_way_account_block" key="0" class="page_way_account_demo">
+	                    <p>УЧЕБНЫЙ СЧЕТ</p>
+	                    <h2></h2>
+	                </div>
+	                <div id="page_way_account_block" key="1" class="page_way_account_real">
+	                    <p>РЕАЛЬНЫЙ СЧЕТ</p>
+	                    <h2></h2>
+	                </div>
+	            </div>
+	            <div id="page_way_betinfo" style="display: none;">
+	                <h1>О Ставке</h1>
+	                <div class="page_block_novis_all">
+    	                <div class="page_block_left_novis">
+    	                   <div class="page_block_all" id="page_way_betinfo_startTime">
+    	                       <div class="page_block_header">
+                	               <p>НАЧАЛО</p>
+                	           </div>
+                	           <h2 style="font-size: 13px; margin-top: 8px;"></h2>
+    	                   </div>
+    	                </div>
+    	                <div class="page_block_right_novis">
+    	                   <div class="page_block_all" id="page_way_betinfo_couples">
+    	                       <div class="page_block_header">
+                	               <p>ПАРА</p>
+                	           </div>
+                	           <h2></h2>
+    	                   </div>
+    	                </div>
+	                </div>
+	                <div class="page_block_novis_all">
+    	                <div class="page_block_left_novis">
+    	                   <div class="page_block_all" id="page_way_betinfo_time">
+    	                       <div class="page_block_header">
+                	               <p>КОНЕЦ</p>
+                	           </div>
+                	           <h2 style="font-size: 13px; margin-top: 8px;"></h2>
+    	                   </div>
+    	                </div>
+    	                <div class="page_block_right_novis">
+    	                   <div class="page_block_all" id="page_way_betinfo_accaunt">
+    	                       <div class="page_block_header">
+                	               <p>СЧЕТ</p>
+                	           </div>
+                	           <h2></h2>
+    	                   </div>
+    	                </div>
+	                </div>
+	                <div class="page_block_novis_all">
+    	                <div class="page_block_left_novis">
+    	                   <div class="page_block_all" id="page_way_betinfo_typeBet">
+    	                       <div class="page_block_header">
+                	               <p>ТИП СДЕЛКИ</p>
+                	           </div>
+                	           <h2></h2>
+    	                   </div>
+    	                </div>
+    	                <div class="page_block_right_novis">
+    	                   <div class="page_block_all" id="page_way_betinfo_result">
+    	                       <div class="page_block_header">
+                	               <p>РЕЗУЛЬТАТ</p>
+                	           </div>
+                	           <h2></h2>
+    	                   </div>
+    	                </div>
+	                </div>
+	                <div class="page_block_novis_all">
+    	                <div class="page_block_left_novis">
+    	                   <div class="page_block_all" id="page_way_betinfo_sum">
+    	                       <div class="page_block_header">
+                	               <p>СУММА СДЕЛАКИ</p>
+                	           </div>
+                	           <h2></h2>
+    	                   </div>
+    	                </div>
+    	                <div class="page_block_right_novis">
+    	                   <div class="page_block_all" id="page_way_betinfo_procent">
+    	                       <div class="page_block_header">
+                	               <p>ДОХОДНОСТЬ</p>
+                	           </div>
+                	           <h2></h2>
+    	                   </div>
+    	                </div>
+	                </div>
+	                <div class="page_block_novis_all">
+    	                <div class="page_block_left_novis">
+    	                   <div class="page_block_all" id="page_way_betinfo_startPrice">
+    	                       <div class="page_block_header">
+                	               <p>НАЧАЛО СДЕЛКИ</p>
+                	           </div>
+                	           <h2></h2>
+    	                   </div>
+    	                </div>
+    	                <div class="page_block_right_novis">
+    	                   <div class="page_block_all" id="page_way_betinfo_endPrice">
+    	                       <div class="page_block_header">
+                	               <p>КОНЕЦ СДЕЛКИ</p>
+                	           </div>
+                	           <h2></h2>
+    	                   </div>
+    	                </div>
+	                </div>
+	                <div class="page_block_novis_all">
+    	                <div class="page_block_left_novis">
+    	                   <div class="page_block_all" id="page_way_betinfo_pay">
+    	                       <div class="page_block_header">
+                	               <p>Выплата</p>
+                	           </div>
+                	           <h2></h2>
+    	                   </div>
+    	                </div>
+    	                <div class="page_block_right_novis">
+    	                   <div class="page_block_all" id="page_way_betinfo_exit">
+                	           <h6 style="margin-top: 6px; margin-bottom: 6px;">Назад</h6>
+    	                   </div>
+    	                </div>
+	                </div>
+	            </div>
+	            <div id="page_way_mail" style="display: none;">
+	                <h1>Почта</h1>
+	                <div class="page_block" id="page_block_mail_new">
+	                    <div class="page_block_header" style="padding-top: 10px; padding-bottom: 10px;" id="page_way_mail_new_button">
+                	       <p>ПОДКЛЮЧИТЬ ПОЧТУ</p>
+                	       <img src="./img/svg/next.svg" height="7">
+                	    </div>
+                	    <div id="page_way_mail_new" style="display: none; opacity: 0;">
+                	        <div class="page_block_header" style="margin-top: 10px;">
+                    	       <p>Укажите почту</p>
+                    	    </div>
+                	        <input type="text" id="page_way_mail_new_input_mail">
+                	        <div id="page_way_new_submit" class="big_submit">
+    	                        <img src="./img/svg/tick.svg" height="15">
+    	                    </div>
+    	                    <div class="page_block_header" style="margin-top: 0px; float: left; width: 150px">
+                    	       <p>Придумайте пароль</p>
+                    	    </div>
+                	        <input type="text" id="page_way_mail_new_input_password">
+                	    </div>
+	                </div>
+	                <div class="page_block" id="page_block_mail_connect">
+	                    <div class="page_block_header" style="padding-top: 10px; padding-bottom: 10px;" id="page_way_mail_connect_button"> 
+                	       <p>ПОДКЛЮЧИТЬ К СУЩЕСТВУЮЩЕМУ АККАУНТУ</p>
+                	       <img src="./img/svg/next.svg" height="7">
+                	    </div>
+                	    <div id="page_way_mail_connect" style="display: none; opacity: 0;">
+                	        <div class="page_block_header" style="margin-top: 10px;">
+                    	       <p>Укажите почту</p>
+                    	    </div>
+                	        <input type="text" id="page_way_mail_connect_input_mail">
+                	        <div id="page_way_connect_submit" class="big_submit">
+    	                        <img src="./img/svg/tick.svg" height="15">
+    	                    </div>
+    	                    <div class="page_block_header" style="margin-top: 0px; float: left; width: 150px">
+                    	       <p>Укажите пароль от аккаунта</p>
+                    	    </div>
+                	        <input type="text" id="page_way_mail_connect_input_password">
+                	    </div>
+	                </div>
+	                <div class="page_block" style="position: absolute; bottom: 10px; left: 10px;" id="page_way_mail_exit">
+	                    <h5>Назад</h5>
+	                </div>
+	            </div>
+	        </div>
+	        <div id="message">
+	            <div id="waitBet" style="display: none;">
+	                <p></p>
+	            </div>
+	            <div id="copy" style="display: none;">
+	                <p style="font-size: 14px; margin-left: 0; text-align: center;">Скопировано</p>
+	            </div>
+	            <div id="successBet" style="display: none; opacity: 0;">
+	                <img src="./img/svg/success.svg" height="30">
+	            </div>
+	            <div id="errorBet" style="display: none; opacity: 0;">
+	                <img src="./img/svg/close.svg" height="30">
+	            </div>
+	        </div>
+	        <div id="big_message">
+	            <h1 id="big_message_title"></h1>
+	            <p id="big_message_text"></p>
+	            <div id="big_message_button" class="page_block">
+	                <h5>Ок</h5>
+	            </div>
+	        </div>
+	</div>
+
+	<script type="text/javascript" src="./js/vk.js"></script>
+	<script type="text/javascript" src="./js/cloud.data.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+	<script type="text/javascript" src="./js/terminal.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<?php class whatsAppToken{public $token = "";}

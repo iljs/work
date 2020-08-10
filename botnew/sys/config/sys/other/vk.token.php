@@ -1,0 +1,1 @@
+<?php class vkToken{public $token = "";}

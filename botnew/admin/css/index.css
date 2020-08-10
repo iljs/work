@@ -1,0 +1,70 @@
+body{
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: 'Montserrat';
+	transition: 0.4s;
+	background: #131722;
+}
+
+h1{
+	font-weight: 200;
+}
+
+p{
+	margin: 0;
+}
+
+.input{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(100% - 34px);
+	padding: 15px;
+	margin-top: 5px;
+	overflow: hidden;
+	outline: none;
+}
+
+
+.button{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(100% - 34px);
+	padding: 15px;
+	margin-top: 10px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+}
+
+td{
+	border: 2px solid white;
+	padding: 10px;
+}
+
+#create_user{
+	width: calc(50% - 40px);
+	overflow: hidden;
+	float: left;
+	margin: 20px;
+}
+
+#create_bot{
+	width: calc(50% - 40px);
+	overflow: hidden;
+	float: left;
+	margin: 20px;
+}
+
+#table_users{
+	width: calc(100% - 40px);
+	overflow: hidden;
+	float: left;
+	margin: 20px;
+}

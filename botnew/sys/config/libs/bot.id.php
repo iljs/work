@@ -1,0 +1,1 @@
+<?php class botId{public $id = "0";}

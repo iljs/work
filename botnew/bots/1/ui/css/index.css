@@ -1,0 +1,338 @@
+body{
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: 'Montserrat';
+	transition: 0.4s;
+	background: #131722;
+}
+
+h1{
+	font-weight: 200;
+}
+
+p{
+	margin: 0;
+}
+
+input{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(100% - 34px);
+	padding: 15px;
+	margin-top: 5px;
+	overflow: hidden;
+	outline: none;
+}
+
+textarea{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(100% - 34px);
+	padding: 15px;
+	margin-top: 5px;
+	height: 143px;
+	outline: none;
+}
+
+#create_message{
+	width: calc(50% - 40px);
+	margin: 20px;
+	float: left;
+	overflow: hidden;
+
+}
+
+#create_message_keyboard{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(20% - 39px);
+	padding: 15px;
+	margin-top: 5px;
+	margin-right: 5px;
+	float: left;
+}
+
+#create_message_function{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(80% - 34px);
+	padding: 15px;
+	margin-top: 5px;
+	float: left;
+}
+
+#create_message_media{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(100% - 34px);
+	padding: 15px;
+	margin-top: 5px;
+	float: left;
+}
+
+#create_message_button{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(100% - 34px);
+	padding: 15px;
+	margin-top: 10px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+}
+
+
+#create_media{
+	width: calc(50% - 40px);
+	margin: 20px;
+	float: left;
+	overflow: hidden;
+
+}
+
+#create_media_button{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(100% - 34px);
+	padding: 15px;
+	margin-top: 10px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+}
+
+
+
+#create_keyboards{
+	width: calc(50% - 40px);
+	margin: 20px;
+	float: left;
+	overflow: hidden;
+}
+
+#keyboards{
+	width: 100%;
+	overflow: hidden;
+}
+
+#create_keyboard_board{
+	width: 100%;
+	overflow: hidden;
+}
+
+#create_keyboard_num_answer{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(10% - 39px);
+	padding: 15px;
+	margin-top: 5px;
+	margin-right: 5px;
+	float: left;
+}
+
+#create_keyboard_text_answer{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(50% - 39px);
+	padding: 15px;
+	margin-top: 5px;
+	margin-right: 5px;
+	float: left;
+}
+
+#create_keyboard_message_id{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(10% - 39px);
+	padding: 15px;
+	margin-top: 5px;
+	margin-right: 5px;
+	float: left;
+}
+
+#create_keyboard_row{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(10% - 39px);
+	padding: 15px;
+	margin-top: 5px;
+	margin-right: 5px;
+	float: left;
+}
+
+#create_keyboard_color{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(20% - 39px);
+	padding: 15px;
+	margin-top: 5px;
+	margin-right: 5px;
+	float: left;
+}
+
+#create_keyboard_plus{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(15% - 39px);
+	padding: 15px;
+	margin-top: 10px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+#create_keyboard_mines{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(15% - 39px);
+	padding: 15px;
+	margin-top: 10px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+#create_keyboard_button{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(70% - 34px);
+	padding: 15px;
+	margin-top: 10px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+}
+
+
+
+#table_message{
+	width: calc(100% - 40px);
+	overflow: hidden;
+	margin: 20px;
+	margin-top: 200px;
+	float: left;
+}
+
+#table_keyboard{
+	width: calc(100% - 40px);
+	overflow: hidden;
+	margin: 20px;
+	margin-top: 20px;
+	float: left;
+}
+
+#table_message_edit{
+	float: left;
+	padding: 5px;
+	cursor: pointer;
+}
+
+#table_message_remove{
+	float: left;
+	padding: 5px;
+	cursor: pointer;
+}
+
+td{
+	border: 2px solid white;
+	padding: 10px;
+}
+
+
+#vk_connect{
+	width: calc(50% - 40px);
+	margin: 20px;
+	float: left;
+	overflow: hidden;
+
+}
+
+#vk_button{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(100% - 34px);
+	padding: 15px;
+	margin-top: 10px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+}
+
+#telegram_connect{
+	width: calc(50% - 40px);
+	margin: 20px;
+	float: left;
+	overflow: hidden;
+
+}
+
+#telegram_button{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(100% - 34px);
+	padding: 15px;
+	margin-top: 10px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+}
+
+#whatsapp_connect{
+	width: calc(50% - 40px);
+	margin: 20px;
+	float: left;
+	overflow: hidden;
+
+}
+
+#whatsapp_button{
+	background: #131722;
+	border: 2px solid white;
+	color: white;
+	font-size: 18px;
+	width: calc(100% - 34px);
+	padding: 15px;
+	margin-top: 10px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+}

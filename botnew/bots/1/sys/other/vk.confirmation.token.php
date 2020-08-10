@@ -1,0 +1,1 @@
+<?php class vkConfirmationToken{public $token = "39b09313";}

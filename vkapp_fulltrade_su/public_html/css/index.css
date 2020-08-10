@@ -1,0 +1,1253 @@
+html{
+    overflow: hidden;
+}
+
+body{
+	background: #131722;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: 'Montserrat';
+	transition: 0.4s;
+	overflow: hidden;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+	margin: 0;
+
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+	color: white;
+}
+
+#root{
+	width: 100%;
+	text-align: center;
+}
+
+#form{
+	width: 90%;
+	margin-left: 5%;
+	overflow: hidden;
+}
+
+#header{
+	width: 100%;
+	overflow: hidden;
+}
+
+#header div{
+	width: calc(50% - 4px) !important;
+	margin-left: 0% !important;
+	float: left;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border: 2px solid white;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+#header div.active{
+	background: white;
+	transition: 0.3s;
+}
+
+#header div.active p{
+	color: #131722;
+	transition: 0.3s;
+}
+
+#form div{
+	width: 96%;
+	overflow: hidden;
+	margin-top: 20px;
+	margin-left: 2%;
+	transition: 0.3s;
+}
+
+#form div a{
+	margin-top: -10px;
+}
+
+#form div input{
+	width: calc(100% - 44px);
+	padding: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background: #131722;
+	border: 2px solid white;
+	font-size: 17px;
+	color: white;
+	overflow: hidden;
+	margin-top: 7px;
+	outline: none;
+}
+
+#form div button{
+	width: 100%;
+	padding: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background: white;
+	color: #131722 !important;
+	border: 2px solid white;
+	font-size: 17px;
+	color: white;
+	overflow: hidden;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+#form div.disActive{
+	display: none;
+	transition: 0.3s;
+}
+
+#load{
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+
+#load img{
+	width: 90%;
+	display: inline-block;
+	margin-top: 100px;
+}
+
+
+#terminal{
+    width: 100%;
+    overflow: hidden;
+}
+
+#terminal #ui{
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#terminal #page{
+    display: none;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#terminal #page.active{
+    display: block;
+    overflow: hidden;
+}
+
+#terminal h1{
+    width: 100%;
+    padding: 11px;
+    font-size: 24px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+#terminal h4{
+    margin: 15px;
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#terminal h5{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px;
+    text-align: center;
+}
+
+.page_block{
+    background: rgba(255,255,255,0.05);
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(100% - 40px);
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.page_block_img{
+    background: rgba(255,255,255,0.05);
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: calc(50% - 30px);
+    float: left;
+    text-align: center;
+    
+}
+
+.page_block_img.active{
+    background: rgba(255,255,255,0.1);
+}
+
+.page_block_img img{
+    display: inline-block;
+    height: 35px;
+}
+
+.page_block_all{
+    background: rgba(255,255,255,0.05);
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.page_block_novis{
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(100% - 40px);
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.page_block_novis_all{
+    overflow: hidden;
+    width: 100%;
+}
+
+.page_block_left{
+    background: rgba(255,255,255,0.05);
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(50% - 30px);
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    float: left;
+}
+
+.page_block_right{
+    background: rgba(255,255,255,0.05);
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(50% - 30px);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    float: right;
+    margin-top: 10px;
+}
+
+.page_block_left_novis{
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(50% - 20px);
+    padding-top: 10px;
+    padding-bottom:10px;
+    float: left;
+}
+
+.page_block_right_novis{
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(50% - 20px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: right;
+}
+
+.page_block_header{
+    width: 100%;
+    overflow: hidden;
+}
+
+.page_block_header p{
+    font-size: 7px;
+    font-weight: 500;
+    float: left;
+    margin-left: 10px;
+}
+
+.page_block_header img{
+    float: right;
+    opacity: 0.6;
+    margin-right: 10px;
+}
+
+#page h2{
+    font-size: 22px;
+    font-weight: 300;
+    margin-left: 10px;
+    float: left;
+}
+
+#page_way_betinfo h2{
+    font-size: 22px;
+    font-weight: 300;
+    margin-left: 10px;
+    float: left;
+}
+
+
+#page h3{
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 10px;
+    float: right;
+    margin-top: 1px;
+    color: green;
+}
+
+#page h6{
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+#page_way_betinfo h6{
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+#trade_widget{
+    overflow: hidden;
+    border-radius: 5px;
+    width: calc(100% - 24px);
+    margin-left: 10px;
+    background: rgba(255,255,255,0.05);
+    padding: 2px;
+}
+
+#terminal #menu{
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    width: 100%;
+    background: rgb(43, 47, 57);
+    
+}
+
+#terminal #menu_blocks img{
+    position: relative !important;
+    width: 24px;
+    padding: 15px;
+    padding-left: calc(12.5% - 12px);
+    padding-right: calc(12.5% - 12px);
+    float: left;
+    opacity: 0.5;
+}
+
+#terminal #menu_blocks{
+    width: 100%;
+    height: 54px;
+    overflow: hidden;
+    position: relative;
+}
+
+#terminal #menu img.active{
+    opacity: 1;
+}
+
+#terminal #trade_up{
+    text-align: center;
+    margin-left: 10px;
+    padding: 10px;
+    width: calc(50% - 40px);
+    float: left;
+    overflow: hidden;
+    background: green;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#terminal #trade_down{
+    text-align: center;
+    width: calc(50% - 40px);
+    padding: 10px;
+    float: right;
+    overflow: hidden;
+    background: red;
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#terminal #trade_up img{
+    display: inline-block;
+}
+
+#terminal #page_way{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    background: #131722;
+    z-index: 5;
+    overflow: hidden;
+    display: none;
+}
+
+#page_way_time{
+    overflow: hidden;
+}
+
+#page_way_bet{
+    overflow: hidden;
+}
+
+#page_way_couples{
+    overflow-y: scroll !important;
+    height: 2251px !important;
+}
+
+#page_way_account{
+    overflow: hidden;
+}
+
+#page_way_time_block{
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+#page_way_time_block h2{
+    float: left;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#page_way_time_block h3{
+    float: right;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+#page_way_bet_block{
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+#page_way_bet_block h2{
+    float: left;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#page_way_bet_block input{
+    width: calc(100% - 54px);
+    padding: 10px;
+    margin: 15px;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,0.05);
+    font-size: 15px;
+    background: #131722;
+    float: left;
+    outline: none;
+}
+
+#page_way_bet_block input.keyup{
+    width: calc(100% - 164px);
+}
+
+#page_way_bet_now_submit{
+    width: 50px;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,0.05);
+    font-size: 15px;
+    background: #131722;
+    float: right;
+    text-align: center;
+}
+
+#page_way_bet_now_submit img{
+    display: inline-block;
+}
+
+.page_way_bet_now{
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    background: #131722;
+    
+}
+
+#page_way_couples_block{
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    overflow: hidden;
+}
+
+#page_way_couples_block h2{
+    float: left;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#page_way_couples_block h3{
+    float: right;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+#page_way_account_block{
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    overflow: hidden;
+}
+
+#page_way_account_block h2{
+    margin-bottom: 15px;
+    margin-left: 15px;
+    font-size: 20px;
+    margin-top: 3px;
+    font-weight: 500;
+}
+
+#page_way_account_block p{
+    margin-left: 15px;
+    margin-top: 15px;
+    font-size: 7px;
+    font-weight: 500;
+}
+
+
+#page_way_betinfo .page_block_all{
+    margin-top: 0px;
+}
+
+#page_way_betinfo .page_block_left_novis{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#page_way_betinfo .page_block_right_novis{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+.order input{
+    width: calc(100% - 144px);
+    padding: 10px;
+    margin: 15px;
+    margin-left: 5px;
+    margin-top: 0px;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,0.05);
+    font-size: 15px;
+    background: #131722;
+    float: left;
+    outline: none;
+}
+
+.page_order_submit{
+    width: 50px;
+    padding: 10px;
+    margin: 15px;
+    margin-right: 5px;
+    margin-top: 0px;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,0.05);
+    font-size: 15px;
+    background: #131722;
+    float: right;
+    text-align: center;
+}
+
+.page_order_submit img{
+    display: inline-block;
+}
+
+
+.page_block_open{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.page_block_open img{
+    -moz-transform: rotate(90deg); /* Для Firefox */
+    -ms-transform: rotate(90deg); /* Для IE */
+    -webkit-transform: rotate(90deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(90deg); /* Для Opera */
+    transform: rotate(90deg);
+    display: inline-block;
+    padding: 5px;
+}
+
+#withdraw_block_pay h4{
+    margin-top: 10px;
+    font-size: 23px;
+    font-weight: 200;
+    text-align: center;
+}
+
+
+#setUserInfo img{
+    border-radius: 100px;
+    margin-top: 5px;
+    float: left;
+}
+
+#setUserInfo h5{
+    text-align: left;
+    opacity: 0.6 !important;
+    margin: 0px; 
+    margin-left: 15px;
+    float: left;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+#setUserInfo h4{
+    text-align: left;
+    margin: 19px; 
+    margin-left: 15px;
+    margin-bottom: 0;
+    float: left;
+    font-size: 15px;
+    font-weight: 300;
+    width: calc(100% - 120px);
+}
+
+#page_way_mail_new{
+    margin-top: 5px;
+}
+
+#page_way_mail input{
+    width: calc(100% - 144px);
+    padding: 10px;
+    margin: 15px;
+    margin-left: 5px;
+    margin-top: 0px;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,0.05);
+    font-size: 15px;
+    background: #131722;
+    float: left;
+    outline: none;
+}
+
+
+#page_way_mail .big_submit{
+    width: 50px;
+    padding: 10px;
+    padding-top: 43px; 
+    padding-bottom: 42px;
+    margin: 15px;
+    margin-right: 5px;
+    margin-top: 0px;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,0.05);
+    font-size: 15px;
+    background: #131722;
+    float: right;
+    text-align: center;
+}
+
+#page_way_mail .submit{
+    width: 50px;
+    padding: 10px;
+    margin: 15px;
+    margin-right: 5px;
+    margin-top: 0px;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,0.05);
+    font-size: 15px;
+    background: #131722;
+    float: right;
+    text-align: center;
+}
+  
+
+
+.history h5{
+    position: absolute;
+    top: calc(50% - 10px);
+    width: 100%;
+    margin: 0;
+}
+
+
+.history_bet_result_win{
+    color: green;
+}
+
+.history_bet_result_lose{
+    color: red !important;
+}
+
+
+
+
+
+
+
+#message{
+    top: 50px;
+    right: -150px;
+    width: 130px;
+    height: 50px;
+    background: #131722;
+    z-index: 5;
+    overflow: hidden;
+    display: none;
+    border-radius: 5px;
+    position: absolute;
+    border: 1px solid white;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    
+}
+
+#message div{
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+
+#message img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#message p{
+    font-size: 16px;
+    font-weight: 500;
+    overflow: hidden;
+    margin-top: 17px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+
+
+#big_message{
+    top: calc(50% - 124px);
+    right: calc(10% - 1px);
+    width: 80%;
+    background: #131722;
+    z-index: 5;
+    overflow: hidden;
+    display: none;
+    border-radius: 5px;
+    position: absolute;
+    border: 1px solid rgba(255,255,255,0.2);
+    opacity: 0;
+    
+}
+
+#big_message div{
+    position: absolute;
+    bottom: 10px;
+}
+
+#big_message p{
+    width: 95%;
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 85px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cssload-dots {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	outline: 1px solid red;
+	filter: url(#goo);
+		-o-filter: url(#goo);
+		-ms-filter: url(#goo);
+		-webkit-filter: url(#goo);
+		-moz-filter: url(#goo);
+}
+
+.cssload-dot {
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.cssload-dot:before {
+	content: "";
+	width: 34px;
+	height: 34px;
+	border-radius: 49px;
+	background: rgba(255,255,255,0.65);
+	position: absolute;
+	left: 50%;
+	transform: translateY(0);
+		-o-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+	margin-left: -17.5px;
+	margin-top: -17.5px;
+}
+
+
+
+.cssload-dot:nth-child(5):before {
+	z-index: 100;
+	width: 44.5px;
+	height: 44.5px;
+	margin-left: -21.75px;
+	margin-top: -21.75px;
+	animation: cssload-dot-colors 4s ease infinite;
+		-o-animation: cssload-dot-colors 4s ease infinite;
+		-ms-animation: cssload-dot-colors 4s ease infinite;
+		-webkit-animation: cssload-dot-colors 4s ease infinite;
+		-moz-animation: cssload-dot-colors 4s ease infinite;
+}
+
+
+.cssload-dot:nth-child(1) {
+	animation: cssload-dot-rotate-1 4s 0s linear infinite;
+		-o-animation: cssload-dot-rotate-1 4s 0s linear infinite;
+		-ms-animation: cssload-dot-rotate-1 4s 0s linear infinite;
+		-webkit-animation: cssload-dot-rotate-1 4s 0s linear infinite;
+		-moz-animation: cssload-dot-rotate-1 4s 0s linear infinite;
+}
+.cssload-dot:nth-child(1):before {
+	background-color: rgb(255,255,255);
+	animation: cssload-dot-move 4s 0s ease infinite;
+		-o-animation: cssload-dot-move 4s 0s ease infinite;
+		-ms-animation: cssload-dot-move 4s 0s ease infinite;
+		-webkit-animation: cssload-dot-move 4s 0s ease infinite;
+		-moz-animation: cssload-dot-move 4s 0s ease infinite;
+}
+
+.cssload-dot:nth-child(2) {
+	animation: cssload-dot-rotate-2 4s 1s linear infinite;
+		-o-animation: cssload-dot-rotate-2 4s 1s linear infinite;
+		-ms-animation: cssload-dot-rotate-2 4s 1s linear infinite;
+		-webkit-animation: cssload-dot-rotate-2 4s 1s linear infinite;
+		-moz-animation: cssload-dot-rotate-2 4s 1s linear infinite;
+}
+.cssload-dot:nth-child(2):before {
+	background-color: rgb(19, 23, 34);
+	animation: cssload-dot-move 4s 1s ease infinite;
+		-o-animation: cssload-dot-move 4s 1s ease infinite;
+		-ms-animation: cssload-dot-move 4s 1s ease infinite;
+		-webkit-animation: cssload-dot-move 4s 1s ease infinite;
+		-moz-animation: cssload-dot-move 4s 1s ease infinite;
+}
+
+.cssload-dot:nth-child(3) {
+	animation: cssload-dot-rotate-3 4s 2s linear infinite;
+		-o-animation: cssload-dot-rotate-3 4s 2s linear infinite;
+		-ms-animation: cssload-dot-rotate-3 4s 2s linear infinite;
+		-webkit-animation: cssload-dot-rotate-3 4s 2s linear infinite;
+		-moz-animation: cssload-dot-rotate-3 4s 2s linear infinite;
+}
+.cssload-dot:nth-child(3):before {
+	background-color: rgb(255,255,255);
+	animation: cssload-dot-move 4s 2s ease infinite;
+		-o-animation: cssload-dot-move 4s 2s ease infinite;
+		-ms-animation: cssload-dot-move 4s 2s ease infinite;
+		-webkit-animation: cssload-dot-move 4s 2s ease infinite;
+		-moz-animation: cssload-dot-move 4s 2s ease infinite;
+}
+
+.cssload-dot:nth-child(4) {
+	animation: cssload-dot-rotate-4 4s 3s linear infinite;
+		-o-animation: cssload-dot-rotate-4 4s 3s linear infinite;
+		-ms-animation: cssload-dot-rotate-4 4s 3s linear infinite;
+		-webkit-animation: cssload-dot-rotate-4 4s 3s linear infinite;
+		-moz-animation: cssload-dot-rotate-4 4s 3s linear infinite;
+}
+.cssload-dot:nth-child(4):before {
+	background-color: rgb(19, 23, 34);
+	animation: cssload-dot-move 4s 3s ease infinite;
+		-o-animation: cssload-dot-move 4s 3s ease infinite;
+		-ms-animation: cssload-dot-move 4s 3s ease infinite;
+		-webkit-animation: cssload-dot-move 4s 3s ease infinite;
+		-moz-animation: cssload-dot-move 4s 3s ease infinite;
+}
+
+@keyframes cssload-dot-move {
+	0% {
+		transform: translateY(0);
+	}
+	18%, 22% {
+		transform: translateY(-68px);
+	}
+	40%, 100% {
+		transform: translateY(0);
+	}
+}
+
+@-o-keyframes cssload-dot-move {
+	0% {
+		-o-transform: translateY(0);
+	}
+	18%, 22% {
+		-o-transform: translateY(-68px);
+	}
+	40%, 100% {
+		-o-transform: translateY(0);
+	}
+}
+
+@-ms-keyframes cssload-dot-move {
+	0% {
+		-ms-transform: translateY(0);
+	}
+	18%, 22% {
+		-ms-transform: translateY(-68px);
+	}
+	40%, 100% {
+		-ms-transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes cssload-dot-move {
+	0% {
+		-webkit-transform: translateY(0);
+	}
+	18%, 22% {
+		-webkit-transform: translateY(-68px);
+	}
+	40%, 100% {
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-moz-keyframes cssload-dot-move {
+	0% {
+		-moz-transform: translateY(0);
+	}
+	18%, 22% {
+		-moz-transform: translateY(-68px);
+	}
+	40%, 100% {
+		-moz-transform: translateY(0);
+	}
+}
+
+@keyframes cssload-dot-colors {
+	0% {
+		background-color: rgb(255,255,255);
+	}
+	25% {
+		background-color: rgb(255,255,255);
+	}
+	50% {
+		background-color: rgb(255,255,255);
+	}
+	75% {
+		background-color: rgb(255,255,255);
+	}
+	100% {
+		background-color: rgb(255,255,255);
+	}
+}
+
+@-o-keyframes cssload-dot-colors {
+	0% {
+		background-color: rgb(255,255,255);
+	}
+	25% {
+		background-color: rgb(255,255,255);
+	}
+	50% {
+		background-color: rgb(255,255,255);
+	}
+	75% {
+		background-color: rgb(255,255,255);
+	}
+	100% {
+		background-color: rgb(255,255,255);
+	}
+}
+
+@-ms-keyframes cssload-dot-colors {
+	0% {
+		background-color: rgb(255,255,255);
+	}
+	25% {
+		background-color: rgb(255,255,255);
+	}
+	50% {
+		background-color: rgb(255,255,255);
+	}
+	75% {
+		background-color: rgb(255,255,255);
+	}
+	100% {
+		background-color: rgb(255,255,255);
+	}
+}
+
+@-webkit-keyframes cssload-dot-colors {
+	0% {
+		background-color: rgb(255,255,255);
+	}
+	25% {
+		background-color: rgb(255,255,255);
+	}
+	50% {
+		background-color: rgb(255,255,255);
+	}
+	75% {
+		background-color: rgb(255,255,255);
+	}
+	100% {
+		background-color: rgb(255,255,255);
+	}
+}
+
+@-moz-keyframes cssload-dot-colors {
+	0% {
+		background-color: rgb(255,255,255);
+	}
+	25% {
+		background-color: rgb(255,255,255);
+	}
+	50% {
+		background-color: rgb(255,255,255);
+	}
+	75% {
+		background-color: rgb(255,255,255);
+	}
+	100% {
+		background-color: rgb(255,255,255);
+	}
+}
+
+@keyframes cssload-dot-rotate-1 {
+	0% {
+		transform: rotate(-105deg);
+	}
+	100% {
+		transform: rotate(270deg);
+	}
+}
+
+@-o-keyframes cssload-dot-rotate-1 {
+	0% {
+		-o-transform: rotate(-105deg);
+	}
+	100% {
+		-o-transform: rotate(270deg);
+	}
+}
+
+@-ms-keyframes cssload-dot-rotate-1 {
+	0% {
+		-ms-transform: rotate(-105deg);
+	}
+	100% {
+		-ms-transform: rotate(270deg);
+	}
+}
+
+@-webkit-keyframes cssload-dot-rotate-1 {
+	0% {
+		-webkit-transform: rotate(-105deg);
+	}
+	100% {
+		-webkit-transform: rotate(270deg);
+	}
+}
+
+@-moz-keyframes cssload-dot-rotate-1 {
+	0% {
+		-moz-transform: rotate(-105deg);
+	}
+	100% {
+		-moz-transform: rotate(270deg);
+	}
+}
+
+@keyframes cssload-dot-rotate-2 {
+	0% {
+		transform: rotate(165deg);
+	}
+	100% {
+		transform: rotate(540deg);
+	}
+}
+
+@-o-keyframes cssload-dot-rotate-2 {
+	0% {
+		-o-transform: rotate(165deg);
+	}
+	100% {
+		-o-transform: rotate(540deg);
+	}
+}
+
+@-ms-keyframes cssload-dot-rotate-2 {
+	0% {
+		-ms-transform: rotate(165deg);
+	}
+	100% {
+		-ms-transform: rotate(540deg);
+	}
+}
+
+@-webkit-keyframes cssload-dot-rotate-2 {
+	0% {
+		-webkit-transform: rotate(165deg);
+	}
+	100% {
+		-webkit-transform: rotate(540deg);
+	}
+}
+
+@-moz-keyframes cssload-dot-rotate-2 {
+	0% {
+		-moz-transform: rotate(165deg);
+	}
+	100% {
+		-moz-transform: rotate(540deg);
+	}
+}
+
+@keyframes cssload-dot-rotate-3 {
+	0% {
+		transform: rotate(435deg);
+	}
+	100% {
+		transform: rotate(810deg);
+	}
+}
+
+@-o-keyframes cssload-dot-rotate-3 {
+	0% {
+		-o-transform: rotate(435deg);
+	}
+	100% {
+		-o-transform: rotate(810deg);
+	}
+}
+
+@-ms-keyframes cssload-dot-rotate-3 {
+	0% {
+		-ms-transform: rotate(435deg);
+	}
+	100% {
+		-ms-transform: rotate(810deg);
+	}
+}
+
+@-webkit-keyframes cssload-dot-rotate-3 {
+	0% {
+		-webkit-transform: rotate(435deg);
+	}
+	100% {
+		-webkit-transform: rotate(810deg);
+	}
+}
+
+@-moz-keyframes cssload-dot-rotate-3 {
+	0% {
+		-moz-transform: rotate(435deg);
+	}
+	100% {
+		-moz-transform: rotate(810deg);
+	}
+}
+
+@keyframes cssload-dot-rotate-4 {
+	0% {
+		transform: rotate(705deg);
+	}
+	100% {
+		transform: rotate(1080deg);
+	}
+}
+
+@-o-keyframes cssload-dot-rotate-4 {
+	0% {
+		-o-transform: rotate(705deg);
+	}
+	100% {
+		-o-transform: rotate(1080deg);
+	}
+}
+
+@-ms-keyframes cssload-dot-rotate-4 {
+	0% {
+		-ms-transform: rotate(705deg);
+	}
+	100% {
+		-ms-transform: rotate(1080deg);
+	}
+}
+
+@-webkit-keyframes cssload-dot-rotate-4 {
+	0% {
+		-webkit-transform: rotate(705deg);
+	}
+	100% {
+		-webkit-transform: rotate(1080deg);
+	}
+}
+
+@-moz-keyframes cssload-dot-rotate-4 {
+	0% {
+		-moz-transform: rotate(705deg);
+	}
+	100% {
+		-moz-transform: rotate(1080deg);
+	}
+}

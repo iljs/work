@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IJB Bots</title>
+
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" shrink-to-fit="no" user-scalable="no" viewport-fit="cover" name="viewport" />
+	<meta id="info" token="" lastBlock="">
+
+	<link rel="stylesheet" type="text/css" href="./css/loader.css">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<link rel="stylesheet" type="text/css" href="./css/sign.css">
+	<link rel="stylesheet" type="text/css" href="./css/startSetting.css">
+	<link rel="stylesheet" type="text/css" href="./css/defaultUserUI.css">
+
+ 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+ 	<link rel="shortcut icon" href="images/icon.png" type="image/png">
+
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script src="./js/jquery.cookie.js"></script>
+</head>
+<body>
+	<div id="loader">
+		<div class="sk-double-bounce">
+			<div class="sk-child sk-double-bounce-1"></div>
+			<div class="sk-child sk-double-bounce-2"></div>
+		</div>
+	</div>
+
+	<div id="sign" class="defaultBlock">
+		<div id="sign_container">
+			<div id="sign_logo">
+				<img src="./img/logo.svg">
+			</div>
+			<div id="sign_form">
+				<div id="sign_inputs">
+					<input type="text" id="sign_login" class="sign_input_up" placeholder="E-mail">
+					<input type="password" id="sign_password" class="sign_input_down" placeholder="Пароль">
+				</div>
+				<div id="sign_button">
+					 <p>Войти</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="startSetting" class="defaultBlock">
+		<div class="defaultBlockHeaderSetting">
+			<h1>Настройка</h1>
+		</div>
+		<div id="startSetting_container">
+			<div class="inputBlock">
+				<input type="text" id="startSetting_phone_input" placeholder="Номер телефона">
+				<p>Телефон будет использоваться для оповещений об аккаунте!</p>
+			</div>
+			<div class="defaultContainer" style="background: none !important;">
+				<div class="inputBlockHalfLeft">
+					<input type="text" id="startSetting_firstName_input" placeholder="Имя">
+				</div>
+				<div class="inputBlockHalfRight">
+					<input type="text" id="startSetting_lastName_input" placeholder="Фамилия">
+				</div>
+			</div>
+		</div>
+		<div class="defaultBlockFixedBottom">
+			<div class="buttonDark" id="startSetting_button_skip">
+				<p>Пропустить</p>
+			</div>
+			<div class="buttonLight" id="startSetting_button_save">
+				<p>Сохранить</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="defaultUserUI" class="defaultBlock">
+		<div id="panel-1" class="panel">
+			<div class="panel-content">
+				<div class="defaultBlockHeader">
+					<h1>Главная</h1>
+				</div>
+			</div>
+		</div>
+		<div id="panel-2" class="panel">
+			<div class="panel-content">
+				<div class="defaultBlockHeader">
+					<h1>Сообщения</h1>
+				</div>
+			</div>		</div>
+		<div id="panel-3" class="panel">
+			<div class="panel-content">
+				<div class="defaultBlockHeader">
+					<h1>Профиль</h1>
+				</div>
+				<div class="defaultContainer" id="settingsProfil">
+					<div id="profilLogo">
+						<p></p>
+					</div>
+					<div id="profilMainInfo">
+						<h6 id="profilMainInfoMail"></h6>
+						<p>Изменить профиль</p>
+					</div>
+					<div id="profilMainInfoClickUI" class="clickUI">
+						<img src="./img/next.svg" width="13">
+					</div>
+				</div>
+				<div class="defaultContainer">
+					<div class="defaultContainerBlock" id="mainSetting">
+						<div class="defaultContainerBlockImg">
+							<img src="./img/setting.svg">
+						</div>
+						<div class="defaultContainerBlockText">
+							<p>Основные</p>
+						</div>
+						<div id="settingMainInfoClickUI" class="clickUI">
+							<img src="./img/next.svg" width="10">
+						</div>
+					</div>
+					<div class="defaultContainerBlock" id="mainSetting">
+						<div class="defaultContainerBlockImg">
+							<img src="./img/balance.svg">
+						</div>
+						<div class="defaultContainerBlockText">
+							<p>Баланс</p>
+						</div>
+						<div id="settingMainInfoClickUI" class="clickUI">
+							<img src="./img/next.svg" width="10">
+						</div>
+					</div>
+					<div class="defaultContainerBlock" id="mainSetting">
+						<div class="defaultContainerBlockImg">
+							<img src="./img/guard.svg">
+						</div>
+						<div class="defaultContainerBlockText">
+							<p>Безопасность</p>
+						</div>
+						<div id="settingMainInfoClickUI" class="clickUI">
+							<img src="./img/next.svg" width="10">
+						</div>
+					</div>
+				</div>
+				<div class="defaultContainer padding5PX">
+					<div class="defaultContainerBlock" id="settingsAbout">
+						<div class="defaultContainerBlockImg">
+							<img src="./img/help.svg">
+						</div>
+						<div class="defaultContainerBlockText">
+							<p>О приложении</p>
+						</div>
+						<div id="settingMainInfoClickUI" class="clickUI">
+							<img src="./img/next.svg" width="10">
+						</div>
+					</div>
+				</div>
+				<div class="defaultContainer padding5PX">
+					<div class="defaultContainerBlock" id="settingsExit">
+						<div class="defaultContainerBlockImg">
+							<img src="./img/logout.svg">
+						</div>
+						<div class="defaultContainerBlockText">
+							<p style="color: red;">Выйти</p>
+						</div>
+						<div id="settingMainInfoClickUI" class="clickUI">
+							<img src="./img/next.svg" width="10">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<div id="panel-1_button" class="menu_button">
+				<img src="./img/home.svg">
+			</div>
+			<div id="panel-2_button" class="menu_button">
+				<img src="./img/message.svg">
+			</div>
+			<div id="panel-3_button" class="menu_button">
+				<img src="./img/other.svg">
+			</div>
+		</div>
+	</div>
+
+	<div id="appInfo" class="defaultBlock" blockLast="#panel-3">
+		<div class="panel-scroll">
+			<div class="defaultBlockHeader">
+				<img src="./img/left-arrow.svg" id="exit">
+				<h1>О приложении</h1>
+			</div>
+			<div class="defaultContainer">
+				<b>О приложении</b>
+				<p>Приложение создано для управления ботом, обработки заказов, сбора статистики, работы тех. поддержки и создания рассылок в удобном интерфейсе и на любой платформе:</p>		<p>Сайт - <a href="https://ijbglobal.ru/botnew/cp/m/index">https://ijbglobal.ru/botnew/cp/m/index</a></p>
+				<p>Google Play - https://ijbglobal.ru/botnew/cp/m/index</p>
+				<p>App Store - https://ijbglobal.ru/botnew/cp/m/index</p>
+			</div>
+			<div class="defaultContainer">
+				<b>Защита данных</b>
+				<p>IJB Global развиваются по принципу открытости! Все данные которые хранятся на наших серверах зашифрованы в форматах SHA1 и RSA. Мы не сотрудничаем с властями и не продаем конфидециальную информацию.</p>
+			</div>
+			<div class="defaultContainer">
+				<b>Контакты</b>
+				<p>Почта - illja.by4ek@gmail.com</p>
+				<p>Приложение IJB Bots разрабоано IJB Global Group LTD</p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+	<div id="profil" class="defaultBlock" blockLast="#panel-3">
+		<div class="panel-scroll">
+			<div class="defaultBlockHeader">
+				<img src="./img/left-arrow.svg" id="exit">
+				<h1>Изменение профиля</h1>
+			</div>
+			<div class="defaultContainer padding5PX" id="profilName">
+				<div class="defaultContainerBlock">
+					<div class="defaultContainerBlockImg">
+						<img src="./img/name.svg">
+					</div>
+					<div class="defaultContainerBlockText">
+						<p>Имя</p>
+					</div>
+					<div class="defaultContainerBlockTextRight">
+						<p id="profilNameP"></p>
+					</div>
+				</div>
+			</div>
+			<div class="defaultContainer padding5PX" id="profilMail">
+				<div class="defaultContainerBlock" id="settingsAbout">
+					<div class="defaultContainerBlockImg">
+						<img src="./img/email.svg">
+					</div>
+					<div class="defaultContainerBlockText">
+						<p>E-mail</p>
+					</div>
+					<div class="defaultContainerBlockTextRight">
+						<p id="profilEmailP"></p>
+					</div>
+				</div>
+			</div>
+			<div class="defaultContainer padding5PX" id="profilPhone">
+				<div class="defaultContainerBlock" id="settingsAbout">
+					<div class="defaultContainerBlockImg">
+						<img src="./img/phone.svg">
+					</div>
+					<div class="defaultContainerBlockText">
+						<p>Телефон</p>
+					</div>
+					<div class="defaultContainerBlockTextRight">
+						<p id="profilPhoneP"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="changeName" class="defaultBlock" blockLast="profil">
+		<div class="panel-scroll">
+			<div class="defaultBlockHeader">
+				<img src="./img/left-arrow.svg" id="exit">
+				<h1>Изменение имени</h1>
+			</div>
+			<div class="defaultContainer">
+				<div class="inputBlockHalfLeft">
+					<input type="text" id="changeName_firstName" placeholder="Имя">
+				</div>
+				<div class="inputBlockHalfRight">
+					<input type="text" id="changeName_lastName" placeholder="Фамилия">
+				</div>
+			</div>
+			<div class="defaultBlockFixedBottom">
+				<div class="buttonLight" id="changeName_save">
+					<p>Сохранить</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="changeMail" class="defaultBlock" blockLast="profil">
+		<div class="panel-scroll">
+			<div class="defaultBlockHeader">
+				<img src="./img/left-arrow.svg" id="exit">
+				<h1>Изменение почты</h1>
+			</div>
+			<div class="defaultContainer">
+				<div class="inputBlock">
+					<input type="text" id="changeMail_mail" placeholder="Новая почта">
+				</div>
+				<div class="inputBlock">
+					<input type="password" id="changeMail_password" placeholder="Текущий пароль">
+				</div>
+			</div>
+			<div class="defaultBlockFixedBottom">
+				<div class="buttonLight" id="changeMail_save">
+					<p>Сохранить</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="changePhone" class="defaultBlock" blockLast="profil">
+		<div class="panel-scroll">
+			<div class="defaultBlockHeader">
+				<img src="./img/left-arrow.svg" id="exit">
+				<h1>Изменение номера</h1>
+			</div>
+			<div class="defaultContainer">
+				<div class="inputBlock">
+					<input type="text" id="changePhone_phone" placeholder="Новый телефон">
+				</div>
+				<div class="inputBlock">
+					<input type="password" id="changePhone_password" placeholder="Текущий пароль">
+				</div>
+			</div>
+			<div class="defaultBlockFixedBottom">
+				<div class="buttonLight" id="changePhone_save">
+					<p>Сохранить</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./js/functions.js"></script>
+	<script type="text/javascript" src="./js/cloud.data.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>

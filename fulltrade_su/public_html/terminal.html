@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FullTrade - Самый прозрачный брокер</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="icon.png" />
+	<link rel="stylesheet" type="text/css" href="css/terminal.css">
+ 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+ 	<link rel="shortcut icon" href="images/icon.png" type="image/png">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+ 	<script src="./js/jquery.cookie.js"></script>
+
+	<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+
+ 	<meta id="trade_info" tradetime="1" tradebet="60" token="" couples="" activecouples="" typecouples="update" balance="" withrdraw="card">
+</head>
+<body>
+	<div id="root">
+		<div id="header">
+			<div id="logo">
+				<img src="img/svg/icon.svg" height="60">
+			</div>
+			<div id="trade_couples">
+				<div id="couples_blocks">
+					
+				</div>
+				<div id="couples_plus">
+					<img src="img/svg/plus.svg" height="20">
+				</div>
+			</div>
+			<div id="account">
+				<div id="account_button_plus">
+					<p>Пополнить</p>
+				</div>
+				<div id="account_balance">
+					 <h6></h6>
+					 <h3></h3>
+				</div>
+			</div>
+		</div>
+		<div id="sidebar">
+			<div id="sidebar_blocks">
+				<div id="sidebar_block" class="button_history">
+					<img src="img/svg/history.svg" width="30">
+					<p>история</p>
+				</div>
+				<div id="sidebar_block" class="button_wallet">
+					<img src="img/svg/wallet.svg" width="30">
+					<p>касса</p>
+				</div>
+				<div id="sidebar_block" class="button_help">
+					<img src="img/svg/book.svg" width="30">
+					<p>чаво</p>
+				</div>
+				<div id="sidebar_block" class="button_window_help">
+					<img src="img/svg/question.svg" width="30">
+					<p>помощь</p>
+				</div>
+				<div id="sidebar_block" class="button_ref">
+					<img src="img/svg/affilate.svg" width="30">
+					<p>реф. программа</p>
+				</div>
+				<div id="sidebar_block" class="button_settings">
+					<img src="img/svg/settings.svg" width="30">
+					<p>настройки</p>
+				</div>
+			</div>
+		</div>
+		<div id="trade">
+			<div id="widget">
+				<div id="tradingview-widget-container"></div>
+			</div>
+			<div id="tradebar">
+				<div id="time">
+					<div id="trade_time">
+						<p>ВРЕМЯ</p>
+						<h5 id="trade_time_select"></h5>
+					</div>
+					<div id="time_plus">
+						<p>+</p>
+					</div>
+					<div id="time_mines">
+						<p>-</p>
+					</div>
+				</div>
+				<div id="bet">
+					<div id="trade_bet">
+						<p>СТАВКА</p>
+						<h5 id="trade_bet_select"></h5>
+					</div>
+					<div id="bet_plus">
+						<p>+</p>
+					</div>
+					<div id="bet_mines">
+						<p>-</p>
+					</div>
+				</div>
+				<div id="result">
+					<p>ДОХОДНОСТЬ</p>
+					<h2></h2>
+					<h6></h6>
+				</div>
+				<div id="option">
+					<div id="up">
+						<img src="img/up.png" height="50">
+					</div>
+					<div id="down">
+						<img src="img/down.png" height="50">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="windows">
+		<div id="trade_time_option" style="opacity: 0;">
+			<h5>ВРЕМЯ</h5>
+			<div id="trade_time_option_block" key="1">
+				<p id="trade_time_option_minute1"></p>
+			</div>
+			<div id="trade_time_option_block" key="2">
+				<p id="trade_time_option_minute2"></p>
+			</div>
+			<div id="trade_time_option_block" key="3">
+				<p id="trade_time_option_minute3"></p>
+			</div>
+			<div id="trade_time_option_block" key="5">
+				<p id="trade_time_option_minute5"></p>
+			</div>
+			<div id="trade_time_option_block" key="10">
+				<p id="trade_time_option_minute10"></p>
+			</div>
+		</div>
+
+		<div id="trade_bet_option" style="opacity: 0;">
+			<h5>СТАВКА</h5>
+			<div id="trade_bet_option_block">
+				<p id="trade_bet_option_bet">60</p>
+			</div>
+			<div id="trade_bet_option_block">
+				<p id="trade_bet_option_bet">150</p>
+			</div>
+			<div id="trade_bet_option_block">
+				<p id="trade_bet_option_bet">300</p>
+			</div>
+			<div id="trade_bet_option_block">
+				<p id="trade_bet_option_bet">600</p>
+			</div>
+			<input type="number" id="trade_bet_option_input">
+		</div>
+
+		<div id="trade_couples_option">
+			<div id="trade_couples_option_header">
+				<h5>ПАРЫ</h5>
+				<img id="trade_couples_option_cancel" src="./img/svg/cancel.svg" height="11">
+			</div>
+			<div id="trade_couples_option_all">
+				
+			</div>
+		</div>
+
+		<div id="background"></div>
+
+		<div id="balance_change">
+			<div id="account_balance_change">
+				<h6></h6>
+				<h3></h3>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="message">
+		<div id="loader">
+			<div class="inner one"></div>
+			<div class="inner two"></div>
+			<div class="inner three"></div>
+		</div>
+		<div id="success">
+			<img src="./img/svg/success.svg">
+			<div id="button_m">
+				<p>OK</p>
+			</div>
+		</div>
+		<div id="error">
+			<img src="./img/svg/close.svg">
+			<div id="button_m">
+				<p>OK</p>
+			</div>
+		</div>
+		<div id="help">
+			<h6>По поводу вопросов пишите нам на почту:<br> support@fulltrade.su</h6>
+			<h6>Коммерческие предложения: work@fulltrade.su</h6>
+			<div id="button_m">
+				<p>OK</p>
+			</div>
+		</div>
+		<div id="verify">
+			<h6>Для подтверждения личности требуется отослать скан паспорта и сделать селфи со своим лицом и паспортом на почту:<br>support@fulltrade.su</h6>
+			<div id="button_m">
+				<p>OK</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="settings" class="">
+		<div id="settings_header">
+			<h1>Настройки</h1>
+			<img src="./img/svg/cancelwhite.svg" height="15">
+		</div>
+		<div id="settings_body">
+			<div id="settings_block">
+				<p>Счет</p>
+				<div id="settings_account_option">
+					<h6 id="settings_demo_button">Учебный</h6>
+					<h6 id="settings_real_button">Реальный</h6>
+				</div>
+			</div>
+			<div id="settings_block">
+				<p>Подтвержден</p>
+				<div id="settings_account_option" class="settings_account_option_second">
+					<h6 id="settings_verify"></h6>
+				</div>
+			</div>
+			<div id="settings_block">
+				<p>Почта</p>
+				<div id="settings_account_option">
+					<input type="text" placeholder="Новая почта" id="settings_new_mail">
+					<h6 id="settings_mail">Сменить</h6>
+				</div>
+			</div>
+			<div id="settings_block">
+				<p>Пароль</p>
+				<div id="settings_account_option">
+					<input type="password" placeholder="Новый пароль" id="settings_new_password">
+					<input type="password" placeholder="Повтор пароля" id="settings_new_password_repeat"><br>
+					<input type="password" placeholder="Старый пароль" id="settings_old_password">
+					<h6 id="settings_password">Сменить</h6>
+				</div>
+			</div>
+			<div id="settings_block">
+				<p>Выход</p>
+				<div id="settings_account_option">
+					<h6 id="settings_exit">Выйти</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="wallet">
+		<div id="wallet_header">
+			<div id="wallet_button_deposit" class="wallet_button wallet_active">
+				<p>Пополнить</p>
+			</div>
+			<div id="wallet_button_withdraw" class="wallet_button">
+				<p>Вывести</p>
+			</div>
+		</div>
+		<div id="wallet_deposit" class="wallet_block wallet_block_vis">
+			<div id="wallet_withdraw_way">
+				<div id="wallet_withdraw_way_block" key="card" class="active">
+					<img src="img/svg/card.svg" height="40">
+				</div>
+				<div id="wallet_withdraw_way_block" key="qiwi">
+					<img src="img/qiwi_koshelek.png" height="40">
+				</div>
+				<div id="wallet_withdraw_way_block" key="yandex">
+					<img src="img/yandex_money.png" height="40">
+				</div>
+				<div id="wallet_withdraw_way_block" key="other">
+					<img src="img/svg/more.svg" height="40">
+				</div>
+			</div>
+			<h6>Все способы пополнения указаны на сайте платежной системы</h6>
+			
+			<input type="number" id="wallet_deposit_way_input" value="2020">
+			<h6>Укажите сумму от 500 рублей</h6>
+
+			<button id="wallet_deposit_way_button">Пополнить</button>
+			
+		</div>
+		<div id="wallet_withdraw" class="wallet_block">
+			<div id="wallet_withdraw_pay">
+				<p>Для вывода средств надо сделать депозит.</p>
+			</div>
+			<div id="wallet_withdraw_verify">
+				<p>Для вывода средств требуется пройти процедуру верификации!</p><p>Требуется отослать скан паспорта и сделать селфи со своим лицом и паспортом на почту support@fulltrade.su</p>
+			</div>
+			<div id="wallet_withdraw_form">
+				<div id="wallet_withdraw_way">
+					<div id="wallet_withdraw_way_block" key="card" class="withdraw_selected active">
+						<img src="img/svg/card.svg" height="40">
+					</div>
+					<div id="wallet_withdraw_way_block" key="qiwi" class="withdraw_selected">
+						<img src="img/qiwi_koshelek.png" height="40">
+					</div>
+					<div id="wallet_withdraw_way_block" key="yandex" class="withdraw_selected">
+						<img src="img/yandex_money.png" height="40">
+					</div>
+					
+				</div>
+
+				<input type="text" placeholder="Укажите реквизиты" id="wallet_withdraw_data_input">
+				<h6>Укажите реквизиты для вывода</h6>
+
+				<input type="number" placeholder="Укажите сумму" value="500" id="wallet_withdraw_way_input">
+				<h6>Укажите сумму от 500 до 25000 рублей</h6>
+
+				<h1 id="wallet_withdraw_way_result">500</h1>
+				<h6 id="wallet_withdraw_way_commision">Коммисия 80 рублей + 3%</h6>
+
+				<button id="wallet_withdraw_way_button">Вывести</button>
+			</div>
+			<div id="wallet_withdraw_result">
+				<div id="wallet_withdraw_result_ok">
+					<img src="./img/svg/success.svg" height="64">
+				</div>
+				<div id="wallet_withdraw_result_error">
+					<img src="./img/svg/close.svg" height="64">
+				</div>
+				<div id="wallet_withdraw_result_loader">
+					<div class="inner one"></div>
+					<div class="inner two"></div>
+					<div class="inner three"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="history_id">
+		<div id="history_id_header">
+			<h1 id="history_id_id"></h1>
+			<img src="./img/svg/cancelwhite.svg" height="15">
+		</div>
+		<p id="history_id_time"></p>
+		<p id="history_id_result"></p>
+		<p id="history_id_type"></p>
+		<p id="history_id_sum"></p>
+		<p id="history_id_procent"></p>
+		<p id="history_id_result_sum"></p>
+		<p id="history_id_price"></p>
+		<p id="history_id_endprice"></p>
+		<p id="history_id_account"></p>
+	</div>
+
+	<div id="optionbar">
+		<div id="optionbar_exit">
+			<img src="./img/svg/cancelwhite.svg" height="10">
+		</div>
+		<div id="history">
+			
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/get.userdata.js"></script>
+	<script type="text/javascript" src="js/send.bet.js"></script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133297584-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-133297584-2');
+    </script>
+
+	
+	<!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+       ym(64452151, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/64452151" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Создание бота</title>
+
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" shrink-to-fit="no" user-scalable="no" viewport-fit="cover" name="viewport" />
+	<meta id="info" count="1" message="create" keyboard="create" keyboardId="0">
+
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+
+ 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+ 	<link rel="shortcut icon" href="images/icon.png" type="image/png">
+
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="create_message">
+		<h1>Сообщение</h1>
+		<input type="hidden" id="create_message_id" value="0">
+		<textarea id="create_message_text" placeholder="Текст сообщения"></textarea>
+		<input type="text" id="create_message_keyboard" placeholder="ID клавиатуры">
+		<input type="text" id="create_message_function" placeholder="Функции">
+		<input type="text" id="create_message_media" placeholder="Медиа">
+		<div id="create_message_button">
+			<p>Добавить</p>
+		</div>
+	</div>
+	<div id="create_keyboards">
+		<h1>Клавитаура</h1>
+		<div id="keyboards">
+			<div id="keyboard_1">
+				<input type="text" placeholder="Номер ответа" id="create_keyboard_num_answer">
+				<input type="text" placeholder="Текст ответа" id="create_keyboard_text_answer">
+				<input type="text" placeholder="ID сообщения" id="create_keyboard_message_id">
+				<input type="text" placeholder="Линия(ВК/Telegram)" id="create_keyboard_row">
+				<input type="text" placeholder="Цвет(ВК)" id="create_keyboard_color">
+			</div>
+		</div>
+		<div id="create_keyboard_board">
+			<div id="create_keyboard_plus">
+				<p>+</p>
+			</div>
+			<div id="create_keyboard_mines">
+				<p>-</p>
+			</div>
+			<div id="create_keyboard_button">
+				<p>Добавить</p>
+			</div>
+		</div>
+	</div>
+	<div id="create_media"> 
+		<h1>Файлы</h1>
+		<input type="file" multiple="multiple" id="create_media_input">
+		<p id="create_media_done"></p>
+		<div id="create_media_button">
+			<p>Добавить</p>
+		</div>
+	</div>
+
+	<div id="table_message">
+		<table width="100%" id="table_message_table">
+			
+		</table>
+	</div>
+
+	<div id="table_keyboard">
+		<table width="100%" id="table_keyboard_table">
+			
+		</table>
+	</div>
+
+	<div id="vk_connect">
+		<h1>Vk</h1>
+		<p id="vk_connect_url" style="font-size: 13px;">Connect url</p>
+		<input type="text" placeholder="Токен" id="vk_token">
+		<input type="text" placeholder="Токен подтверждения" id="vk_conf_token">
+		<input type="text" placeholder="Секретный ключ" id="vk_secret_key">
+		<div id="vk_button">
+			<p>Добавить</p>
+		</div>
+	</div>
+
+	<div id="telegram_connect">
+		<h1>Telegram</h1>
+		<input type="text" placeholder="Токен" id="telegram_token">
+		<div id="telegram_button">
+			<p>Добавить</p>
+		</div>
+	</div>
+
+	<div id="whatsapp_connect">
+		<h1>WhatsApp</h1>
+		<input type="text" placeholder="Токен" id="whatsapp_token">
+		<input type="text" placeholder="instanceId" id="whatsapp_id">
+		<div id="whatsapp_button">
+			<p>Добавить</p>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>

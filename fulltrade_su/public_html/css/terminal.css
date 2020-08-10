@@ -1,0 +1,1398 @@
+body{
+	background: #131722;
+	overflow: hidden;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: 'Montserrat';
+	transition: 0.4s;
+	min-width: 900px;
+
+}
+
+a{
+	color: white;
+	text-decoration: none;
+	margin: 0;
+
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+	color: white;
+}
+
+#root{
+	width: 100%;
+	overflow: hidden;
+	display: block;
+	z-index: 10 !important;
+}
+
+#header{
+	overflow: hidden;
+	width:  100%;
+	display: block;
+	height: 80px;
+	float: right;
+}
+
+#header #logo{
+	padding: 10px;
+	overflow: hidden;
+	float: left;
+}
+
+#header #trade_couples{
+	float: left;
+	overflow: hidden;
+	max-width: calc(100% - 400px);
+}
+
+#header #couples_blocks{
+	float: left;
+	overflow: hidden;
+}
+
+#header #couples{
+	height: 77px;
+	width: 140px;
+	background: rgba(0,0,0,0.2);
+	float: left;
+	border-bottom: 3px solid #0cc70c;
+	overflow: hidden;
+	cursor: pointer;
+	opacity: 0.65;
+}
+
+#header #couples.active{
+	opacity: 1 !important;
+}
+
+#header #couples:hover{
+	opacity: 1 !important;
+}
+
+#header #couples h6{
+	margin-top: 15px;
+	margin-left: 5px;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+#header #couples p{
+	margin-top: 15px;
+	margin-left: 6px;
+	font-size: 15px;
+	font-weight: 500;
+	color: #0cc70c;
+}
+
+#header #couples_blocks{
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none;
+    
+}
+
+#history::-webkit-scrollbar {
+	width: 0px;
+}
+
+#header #couples_plus{
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 10px;
+	transition: 0.2;
+	opacity: 0.6;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+#header #couples_plus:hover{
+	opacity: 1;
+	transition: 0.4s;
+}
+
+#header #couples_delete{
+	margin: 5px;
+	margin-top: 16px;
+	float: right;
+	cursor: pointer;
+	
+}
+
+#header #couples_delete:hover{
+	opacity: 0.7;
+}
+
+#header #account{
+	float: right;
+	overflow: hidden;
+}
+
+#header #account_button_plus{
+	background: #cc8418;
+	border-radius: 3px;
+	padding: 15px;
+	padding-right: 25px;
+	padding-left: 25px;
+	font-size: 18px;
+	margin-top: 16px;
+	margin-left: 30px;
+	margin-right: 30px;
+	float: right;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+#header #account_balance{
+	float: right;
+	overflow: hidden;
+	text-align: right;
+	margin-top: 17px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+#header #account_balance:hover h3{
+	color: white !important;
+	transition: 0.4s;
+}
+
+#header #account_balance:hover h6{
+	color: white !important;
+	transition: 0.4s;
+}
+
+#header #account_balance h6{
+	font-size: 10px;
+	color: #0cc70c;
+	font-weight: 500;
+	transition: 0.4s;
+}
+
+#header #account_balance h3{
+	font-size: 30px;
+	font-weight: 300;
+	margin-top: 2px;
+	color: #0cc70c;
+	transition: 0.4s;
+}
+
+#sidebar{
+	float: left;
+	overflow: hidden;
+	display: block;
+	text-align: center;
+	width: 80px;
+	z-index: 10 !important;
+	position: absolute;
+	top: 80px;
+	left: 0;
+
+}
+
+#sidebar #sidebar_blocks{
+	margin-top: 20px;
+	overflow: hidden;
+	display: block;
+	z-index: 10;
+}
+
+#sidebar #sidebar_block{
+	width: 100%;
+	margin-top: 30px;
+	overflow: hidden;
+	display: block;
+	text-align: center;
+	opacity: 0.4;
+	cursor: pointer;
+	transition: 0.4s;
+	z-index: 10;
+}
+
+#sidebar #sidebar_block:hover{
+	opacity: 1;
+	transition: 0.4s;
+	z-index: 10;
+}
+
+#sidebar #sidebar_block img{
+	display: inline-block;
+}
+
+#sidebar #sidebar_block p{
+	font-size: 13px;
+}
+
+#trade{
+	width: calc(100% - 80px);
+	overflow: hidden;
+	display: block;
+	float: left;
+	z-index: 1 !important;
+	-webkit-touch-callout: none; 
+  	-webkit-user-select: none;   
+  	-khtml-user-select: none;   
+  	-moz-user-select: none;     
+  	-ms-user-select: none;       
+  	user-select: none;  
+  	margin-left: 80px;
+}
+#trade #widget{
+	width: calc(100% - 214px);
+	overflow: hidden;
+	display: block;
+	float: left;
+}
+
+#trade #tradebar{
+	display: block;
+	float: right;
+	overflow: hidden;
+	text-align: center;
+	width: 214px;
+}
+
+#trade #time{
+	width: 154px;
+	margin-top: 50px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#trade #trade_time{
+	background: rgba(255,255,255,0.1);
+	border-radius: 3px;
+	text-align: left;
+	width: 100%;
+	cursor: pointer;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+}
+
+#trade #trade_time:hover{
+	background: rgba(255,255,255,0.05);
+}
+
+#trade #trade_time p{
+	margin: 10px;
+	font-size: 9px;
+	font-weight: 500;
+}
+
+#trade #trade_time h5{
+	margin-left: 10px;
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 7px;
+}
+
+#trade #time_plus{
+	background: rgba(255,255,255,0.1);
+	margin-right: 10px;
+	margin-top: 5px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 17px;
+	float: left;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#trade #time_plus:hover{
+	background: rgba(255,255,255,0.05);
+}
+
+#trade #time_mines{
+	background: rgba(255,255,255,0.1);
+	margin-left: 10px;
+	margin-top: 5px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 17px;
+	float: right;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#trade #time_mines:hover{
+	background: rgba(255,255,255,0.05);
+}
+
+#trade #bet{
+	width: 154px;
+	margin-top: 50px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#trade #trade_bet{
+	background: rgba(255,255,255,0.1);
+	border-radius: 3px;
+	text-align: left;
+	width: 100%;
+	cursor: pointer;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#trade #trade_bet:hover{
+	background: rgba(255,255,255,0.05);
+}
+
+#trade #trade_bet p{
+	margin: 10px;
+	font-size: 9px;
+	font-weight: 500;
+}
+
+#trade #trade_bet h5{
+	margin-left: 10px;
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 7px;
+}
+
+#trade #bet_plus{
+	background: rgba(255,255,255,0.1);
+	margin-right: 10px;
+	margin-top: 5px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 17px;
+	float: left;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#trade #bet_plus:hover{
+	background: rgba(255,255,255,0.05);
+}
+
+#trade #bet_mines{
+	background: rgba(255,255,255,0.1);
+	margin-left: 10px;
+	margin-top: 5px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 17px;
+	float: right;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#trade #bet_mines:hover{
+	background: rgba(255,255,255,0.05);
+}
+
+#trade #result{
+	width: 154px;
+	margin-top: 40px;
+	display: inline-block;
+	overflow: hidden;
+	text-align: left;
+}
+
+
+#trade #result p{
+	font-size: 11px;
+	font-weight: 500;
+	opacity: 0.9;
+}
+
+#trade #result h2{
+	font-size: 40px;
+	font-weight: 200;
+	color: #0cc70c;
+	margin-top: 5px;
+}
+
+#trade #result h6{
+	font-size: 17px;
+	font-weight: 500;
+	margin-top: 3px;
+}
+
+
+#trade #tradebar #option{
+	position: absolute;
+	bottom: 10px;
+	right: 30px;
+	overflow: hidden;
+	width: 154px;
+	display: inline-block;
+}
+
+#trade #tradebar #option #up{
+	width: 154px;
+	background: #0cc70c;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 10px;
+	border-radius: 3px;
+	text-align: center;
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+#trade #tradebar #option #up:hover{
+	opacity: 1;
+}
+
+#trade #tradebar #option #down{
+	width: 154px;
+	background: red;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 10px;
+	border-radius: 3px;
+	text-align: center;
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+#trade #tradebar #option #down:hover{
+	opacity: 1;
+}
+
+
+#trade_time_option{
+	top: 130px;
+	right: 214px;
+	background: rgba(255,255,255,0.8);
+	width: 190px;
+	display: block;
+	position: absolute;
+	border-radius: 3px;
+}
+
+#trade_time_option h5{
+	color: #2d2d54;
+	font-weight: 500;
+	font-size: 11px;
+	margin: 10px;
+}
+
+#trade_time_option_block{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+#trade_time_option_block:hover{
+	background: #131722;
+}
+
+#trade_time_option_block:hover p{
+	color: white;
+}
+
+#trade_time_option_block p{
+	color: #2d2d54;
+	font-size: 17px;
+	font-weight: 400;
+}
+
+#trade_bet_option{
+	top: 279px;
+	right: 214px;
+	background: rgba(255,255,255,0.8);
+	width: 190px;
+	display: block;
+	position: absolute;
+	border-radius: 3px;
+}
+
+#trade_bet_option h5{
+	color: #2d2d54;
+	font-weight: 500;
+	font-size: 11px;
+	margin: 10px;
+}
+
+#trade_bet_option_block{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+#trade_bet_option_block:hover{
+	background: #131722;
+}
+
+#trade_bet_option_block:hover p{
+	color: white;
+}
+
+#trade_bet_option_block p{
+	color: #2d2d54;
+	font-size: 17px;
+	font-weight: 400;
+}
+
+#trade_bet_option_input{
+	margin-top: 10px;
+	border: none;
+	border-top: 2px solid #131722;
+	width: calc(100% - 10px);
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #2d2d54;
+	font-size: 20px;
+	font-weight: 400;
+	outline: none;
+}
+
+#trade_bet_option_input:hover{
+	background: rgba(0,0,0,0.1);
+}
+
+#trade_bet_option_input:focus{
+	background: rgba(0,0,0,0.1);
+}
+
+#trade_couples_option{
+	background: rgba(255,255,255,0.8);
+	width: 420px;
+	height: 741px;
+	top: 85px;
+	display: block;
+	position: absolute;
+	border-radius: 3px;
+	z-index: 999999;
+	display: none;
+}
+
+#trade_couples_option.vis{
+	display: block;
+}
+
+#trade_couples_option_header{
+	height: 32px;
+	width: 100%;
+	display: block;
+	overflow: hidden;
+}
+
+#trade_couples_option h5{
+	color: #2d2d54;
+	font-weight: 500;
+	font-size: 13px;
+	margin: 10px;
+	float: left;
+}
+
+#trade_couples_option img{
+	margin: 10px;
+	float: right;
+	cursor: pointer;
+}
+
+#trade_couples_option_all{
+	width: 100%;
+	height: 710px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#trade_couples_once:hover{
+	background: #131722;
+}
+
+#trade_couples_once:hover h6{
+	color: white;
+}
+
+#trade_couples_once{
+	padding: 17px;
+	padding-right: 5px;
+	padding-left: 10px;
+	width: 90px;
+	overflow: hidden;
+	float: left;
+}
+
+#trade_couples_once_country{
+	float: left;
+}
+
+#trade_couples_once_country h6{
+	font-size: 16px;
+	color: black;
+	font-weight: 400;
+}
+
+#trade_couples_once_cash{
+	float: right;
+}
+
+#trade_couples_once_cash p{
+	font-size: 16px;
+	color: green;
+	font-weight: 600;
+}
+
+
+#balance_change{
+	position: absolute;
+	overflow: hidden;
+	top: 80px;
+	right: 200px;
+	background: #131722;
+	display: none;
+	width: 150px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 14px;
+
+}
+
+#account_balance_change{
+	float: right;
+	overflow: hidden;
+	text-align: right;
+	cursor: pointer;
+	transition: 0.4s;
+}
+#account_balance_change h6{
+	font-size: 10px;
+	color: #0cc70c;
+	font-weight: 500;
+	transition: 0.4s;
+}
+
+#account_balance_change h3{
+	font-size: 30px;
+	font-weight: 300;
+	margin-top: 2px;
+	color: #0cc70c;
+	transition: 0.4s;
+}
+
+#account_balance_change:hover h3{
+	color: white !important;
+	transition: 0.4s;
+}
+
+#account_balance_change:hover h6{
+	color: white !important;
+	transition: 0.4s;
+}
+
+#wallet{
+	width: 600px;
+	overflow: hidden;
+	display: none;
+	height: 550px;
+	background: #131722;
+	position: absolute;
+	left: calc(50% - 300px);
+	top: calc(50% - 275px);
+	z-index: 101;
+}
+
+#wallet.vis{
+	display: block !important;
+}
+
+#wallet input{
+	width: 50%;
+	padding: 15px;
+	margin-top: 20px;
+	margin-left: 10px;
+	border: 2px solid white;
+	background: #131722;
+	outline: none;
+	color: white;
+	font-size: 18px;
+}
+
+#wallet button{
+	width: calc(50% + 32px);
+	padding: 15px;
+	border: 2px solid white;
+	background: white;
+	outline: none;
+	color: #131722;
+	font-size: 18px;
+	text-align: center;
+	cursor: pointer;
+	position: absolute;
+	left: 10px;
+	bottom: 20px;
+	overflow: hidden;
+}
+
+#wallet h6{
+	margin-left: 10px;
+	font-weight: 400;
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+#wallet h1{
+	margin-top: 20px;
+	font-size: 40px;
+	font-weight: 200;
+	margin-left: 10px;
+}
+
+#wallet_header{
+	width: 100%;
+	overflow: hidden;
+}
+
+.wallet_button{
+	width: 50%;
+	cursor: pointer;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	float: left;
+	overflow: hidden;
+	background: rgba(255,255,255,0.7);
+}
+
+.wallet_button:hover{
+	background: white;
+}
+
+.wallet_active{
+	background: white;
+}
+
+.wallet_button p{
+	font-size: 20px;
+	font-weight: 500;
+	text-align: center;
+	color: black;
+}
+
+.wallet_block{
+	display: none;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.wallet_block_vis{
+	display: block;
+}
+
+#wallet_withdraw_pay{
+	width: 100%;
+	display: none;
+	overflow: hidden;
+}
+
+#wallet_withdraw_verify{
+	width: 100%;
+	display: none;
+	overflow: hidden;
+}
+
+#wallet_withdraw_form{
+	width: 100%;
+	display: none;
+	overflow: hidden;
+}
+
+.wallet_withdraw_block_vis{
+	display: block !important;
+}
+
+.wallet_withdraw_block_vis p{
+	margin: 20px;
+	font-size: 20px;
+	width: 80%;
+}
+
+#wallet_withdraw_way{
+	width: 100%;
+	overflow: hidden;
+}
+
+#wallet_withdraw_way_block{
+	width: 22%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	cursor: pointer;
+	transition: 0.2s;
+	background: rgba(255,255,255,0.1);
+	border-radius: 3px;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+	float: left;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.withdraw_selected{
+    width: 30% !important;
+}
+
+#wallet_withdraw_way_block img{
+	display: inline-block;
+}
+
+#wallet_withdraw_way_block.active{
+	background: rgba(255,255,255,0.2);
+}
+
+#wallet_withdraw_way_block:hover{
+	background: rgba(255,255,255,0.2);
+}
+
+#wallet_withdraw_result{
+	width: 100%;
+	display: none;
+	overflow: hidden;
+	height: 476px;
+}
+
+#wallet_withdraw_result div.vis{
+	display: block;
+}
+
+#wallet_withdraw_result div{
+	display: none;
+	width: 100%;
+	height: 476px;
+	overflow: hidden;
+
+}
+
+#wallet_withdraw_result div img{
+	overflow: hidden;
+	width: 100px;
+	height: 100px;
+	top: calc(50% - 4px);
+  	left: calc(50% - 50px);
+  	position: absolute;
+}
+
+#wallet_withdraw_result_loader{
+	position: absolute;
+	top: calc(50% - 32px);
+	left: calc(50% - 32px);
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	perspective: 800px;
+}
+
+
+
+
+
+
+#optionbar{
+	position: absolute;
+	top: 80px;
+	left: -350px;
+	width: 350px;
+	background: #131722;
+	z-index: 5 !important;
+}
+
+#optionbar_exit{
+	width: 100%;
+	height: 20px;
+	overflow: hidden;
+}
+
+#optionbar_exit img{
+	margin: 5px;
+	float: right;
+	cursor: pointer;
+	transition: 0.2;
+}
+
+#optionbar_exit img:hover {
+    transform: scaleX(-1);
+    transition: 0.2;
+  }
+
+#history{
+	width: 100%;
+	overflow-y: scroll;
+	display: none;
+	-ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none;
+}
+
+#history::-webkit-scrollbar {
+	width: 0px;
+}
+
+#history h2{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-weight: 200;
+	margin-left: 10px;
+	overflow: hidden;
+}
+
+#history_block{
+	width: 100%;
+	overflow: hidden;
+	border-bottom: 3px solid rgba(255,255,255,0.1);
+}
+
+#history_block_h5{
+	float: left;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	margin-left: 20px;
+}
+
+#history_block_h5 h5{
+	font-size: 19px;
+	font-weight: 500;
+}
+
+#history_block_couples{
+	float: right;
+	text-align: left;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-right: 10px;
+	width: 100px;
+}
+
+#history_block_couples h1{
+	font-size: 17px;
+	font-weight: 400;
+}
+
+#history_block_couples p{
+	font-size: 17px;
+	font-weight: 600;
+	margin-top: 5px;
+}
+
+#history_block_couples #iup{
+	color: green;
+}
+
+#history_block_couples #iup:after{
+	content: 'Выше';
+}
+
+#history_block_couples #idown{
+	color: red;
+}
+
+#history_block_couples #idown:after{
+	content: 'Ниже';
+}
+
+
+#history_block_couples #iwin{
+	color: green;
+}
+
+#history_block_couples #iwin:after{
+	content: 'Победа';
+}
+
+#history_block_couples #ilose{
+	color: red;
+}
+
+#history_block_couples #ilose:after{
+	content: 'Проигрыш';
+}
+
+
+.history_hover:hover{
+	opacity: 0.8 !important;
+	cursor: pointer;
+}
+
+
+
+#history_block_right{
+	float: right;
+	text-align: right;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-right: 20px;
+	width: 135px;
+}
+
+#history_block_right h1{
+	font-size: 17px;
+	font-weight: 400;
+}
+
+#history_block_right p{
+	font-size: 13px;
+	font-weight: 600;
+	margin-top: 4px;
+}
+
+
+#history_id{
+	width: 400px;
+	overflow: hidden;
+	display: none;
+	height: 400px;
+	background: #131722;
+	position: absolute;
+	left: calc(50% - 200px);
+	top: calc(50% - 200px);
+	z-index: 101;
+}
+
+#history_id.vis{
+	display: block !important;
+}
+
+#history_id_header{
+	width: 100%;
+	overflow: hidden;
+	display: block;
+}
+
+#history_id_header h1{
+	font-size: 30px;
+	font-weight: 200;
+	float: left;
+	margin: 10px;
+}
+
+#history_id_header img{
+	float: right;
+	margin: 5px;
+	cursor: pointer;
+}
+
+#history_id p{
+	font-size: 20px;
+	font-weight: 400;
+	margin-left: 15px;
+	margin-top: 8px;
+}
+
+
+#background{
+	width: 100%;
+	background: rgba(0,0,0,0.4);
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+
+
+#background.vis{
+	display: block;
+}
+
+
+#message{
+	display: none;
+	position: absolute;
+	overflow: hidden;
+	width: 300px;
+	height: 300px;
+	background: #131722;
+	top: calc(50% - 150px);
+	left: calc(50% - 150px);
+	z-index: 102;
+}
+
+
+#message.vis{
+	display: block;
+}
+
+#message img{
+	overflow: hidden;
+	width: 64px;
+	height: 64px;
+	top: calc(50% - 62px);
+  	left: calc(50% - 32px);
+  	position: absolute;
+}
+
+#button_m{
+	cursor: pointer;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	width: 100%;
+	background: rgba(255,255,255,0.05);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+#button_m p{
+	color: white;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+
+#success{
+	width: 100%;
+	height: 100%;
+	display: none;
+	overflow: hidden;
+}
+
+#success.vis{
+	display: block;
+}
+
+
+#error{
+	width: 100%;
+	height: 100%;
+	display: none;
+	overflow: hidden;
+}
+
+#error.vis{
+	display: block;
+}
+
+#help{
+	width: 100%;
+	height: 100%;
+	display: none;
+	overflow: hidden;
+	text-align: center;
+}
+
+#help.vis{
+	display: block;
+}
+
+#help h6{
+	margin-top: 40px;
+	width: 90%;
+	margin-left: 5%;
+	font-size: 17px;
+	font-weight: 300;
+}
+
+#verify{
+	width: 100%;
+	height: 100%;
+	display: none;
+	overflow: hidden;
+	text-align: center;
+}
+
+#verify.vis{
+	display: block;
+}
+
+#verify h6{
+	margin-top: 40px;
+	width: 90%;
+	margin-left: 5%;
+	font-size: 17px;
+	font-weight: 300;
+}
+
+
+
+
+
+
+#settings{
+	background: #131722;
+	position: absolute;
+    top: calc(50% - 300px);
+    left: calc(50% - 450px);
+	display: none;
+	width: 900px;
+	height: 600px;
+	border-radius: 3px;
+	z-index: 102;
+}
+
+#settings.vis{
+	display: block;
+}
+
+#settings_header{
+	width: 100%;
+	overflow: hidden;
+	display: block;
+}
+
+#settings_header h1{
+	font-size: 30px;
+	font-weight: 200;
+	float: left;
+	margin: 10px;
+}
+
+#settings_header img{
+	float: right;
+	margin: 5px;
+	cursor: pointer;
+}
+
+#settings_header img:hover{
+	opacity: 0.6;
+}
+
+
+#settings_block{
+	margin: 25px;
+	float: left;
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+#settings_block p{
+	font-size: 23px;
+	font-weight: 500;
+	float: left;
+	margin-top: 17px;
+	width: 150px;
+}
+
+#settings_account_option{
+	float: left;
+	margin-left: 40px;
+}
+
+#settings_account_option h6{
+	float: left;
+	background: white;
+	color: #131722;
+	opacity: 0.7;
+	overflow: hidden;
+	padding: 12px;
+	width: 150px;
+	margin-left: 5px;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#settings_account_option h6:hover{
+	opacity: 1;
+}
+
+#settings_account_option input{
+	padding: 11px;
+	border: 2px solid white;
+	background: #131722;
+	color: white;
+	font-size: 16px;
+	margin-left: 5px;
+	margin-top: 10px;
+	overflow: hidden;
+	float: left;
+	width: 150px;
+}
+
+
+.input_success{
+	border: 2px solid green !important;
+}
+
+.input_error{
+	border: 2px solid red !important;
+}
+
+
+#loader {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  perspective: 800px;
+  display: none;
+}
+
+#loader.vis{
+	display: block;
+}
+
+.inner {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;  
+}
+
+.inner.one {
+  left: 0%;
+  top: 0%;
+  animation: rotate-one 1s linear infinite;
+  border-bottom: 3px solid #EFEFFA;
+}
+
+.inner.two {
+  right: 0%;
+  top: 0%;
+  animation: rotate-two 1s linear infinite;
+  border-right: 3px solid #EFEFFA;
+}
+
+.inner.three {
+  right: 0%;
+  bottom: 0%;
+  animation: rotate-three 1s linear infinite;
+  border-top: 3px solid #EFEFFA;
+}
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}

@@ -1,0 +1,1 @@
+<?php class vkSecretKey{public $key = "";}

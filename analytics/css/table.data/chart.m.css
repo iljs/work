@@ -1,0 +1,16 @@
+#main.m #chart_menu_main{
+	position: fixed;
+    overflow: hidden;
+    bottom: 0px;
+    width: 100%;
+    background: rgb(43, 47, 57);
+}
+
+#main.m #chart_menu_all{
+	height: 150px;
+	position: fixed;
+    overflow: hidden;
+    bottom: -150px;
+    width: 100%;
+    background: rgb(43, 47, 57);
+}
